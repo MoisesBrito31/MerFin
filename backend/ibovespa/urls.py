@@ -1,0 +1,8 @@
+from django.urls import path
+from .views import AtivoListAPIView, SetorListAPIView, SegmentoListAPIView
+
+urlpatterns = [
+    path('ativos/', AtivoListAPIView.as_view(), name='api-ativos-list'),
+    path('setor/', SetorListAPIView.as_view(), name='api-setor-list'),
+    path('segmento/', SegmentoListAPIView.as_view(), name='api-segmento-list'),
+]

@@ -1,6 +1,7 @@
 import Home from '@/views/HomeView.vue'
 import dataView from '@/views/os-data-View.vue'
 import estado from '@/views/estado-data-View.vue'
+import AtivosView from '@/views/AtivosView.vue'
 import Login from '@/views/LoginView.vue'
 import Vue from 'vue'
 import Cookies from 'js-cookie'
@@ -22,6 +23,11 @@ const routes = [
   {
     path: '/page2',
     component: estado,
+    meta: { requiresAuth: true }
+  },
+  {
+    path: '/ativos',
+    component: AtivosView,
     meta: { requiresAuth: true }
   },
   {
@@ -55,3 +61,4 @@ router.beforeEach((to, from, next) => {
 });
 
 export default router
+

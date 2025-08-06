@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'user',
     'OS',
+    'ibovespa',
 ]
 
 MIDDLEWARE = [
@@ -149,4 +150,3 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 AUTH_USER_MODEL = 'user.Usuario'
 
 CORS_ORIGIN_ALLOW_ALL = True
-

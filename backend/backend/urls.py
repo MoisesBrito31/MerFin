@@ -27,8 +27,9 @@ urlpatterns = [
     path('',indexView.as_view(),name="index"),  
     path('user/', include('user.urls')),
     path('api/os/',include('OS.urls')),
-    #re_path(r'^.*$', indexView.as_view())
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('api/ibovespa/', include('ibovespa.urls')),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = "OS.views.index404"
 handler500 = "OS.views.index500"
+
