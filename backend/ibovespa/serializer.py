@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Ativo, Setor, Segmento
+from .models import Ativo, Setor, Segmento, HistoricoAtivo
 
 class SetorSerializer(serializers.ModelSerializer):
     class Meta:
@@ -25,4 +25,9 @@ class AtivoListSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Ativo
-        fields = ['id', 'codigo', 'nome', 'setor', 'segmento', 'preco_atual', 'variacao']
+        fields = ['id', 'codigo', 'nome', 'setor', 'segmento', 'preco_atual', 'variacao', 'dividendo_valor', 'dividendo_percentual']
+
+class HistoricoAtivoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = HistoricoAtivo
+        fields = '__all__'

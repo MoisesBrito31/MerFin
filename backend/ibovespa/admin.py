@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Ativo, Setor, Segmento
+from .models import Ativo, Setor, Segmento, HistoricoAtivo
 
 @admin.register(Setor)
 class SetorAdmin(admin.ModelAdmin):
@@ -17,3 +17,5 @@ class AtivoAdmin(admin.ModelAdmin):
     search_fields = ('codigo', 'nome')
     list_filter = ('tipo', 'setor', 'segmento')
     ordering = ('codigo',)
+
+admin.site.register(HistoricoAtivo)

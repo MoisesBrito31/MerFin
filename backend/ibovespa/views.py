@@ -1,8 +1,10 @@
 from django.db.models import Q
 from rest_framework import generics
 from rest_framework import filters
-from .models import Ativo, Setor, Segmento
-from .serializer import AtivoListSerializer, SetorSerializer, SegmentoSerializer
+from .models import Ativo, Setor, Segmento, HistoricoAtivo
+from .serializer import AtivoListSerializer, SetorSerializer, SegmentoSerializer, AtivoSerializer, HistoricoAtivoSerializer
+from rest_framework.response import Response
+from rest_framework.views import APIView
 
 class AtivoListAPIView(generics.ListAPIView):
     serializer_class = AtivoListSerializer
@@ -34,6 +36,11 @@ class AtivoListAPIView(generics.ListAPIView):
         queryset = queryset.filter(q_filter)
         return queryset
 
+class AtivoDetailAPIView(generics.RetrieveAPIView):
+    queryset = Ativo.objects.all()
+    serializer_class = AtivoSerializer
+    lookup_field = 'codigo'
+
 class SetorListAPIView(generics.ListAPIView):
     queryset = Setor.objects.all()
     serializer_class = SetorSerializer
@@ -41,4 +48,15 @@ class SetorListAPIView(generics.ListAPIView):
 class SegmentoListAPIView(generics.ListAPIView):
     queryset = Segmento.objects.all()
     serializer_class = SegmentoSerializer
+
+class HistoricoAtivoListAPIView(generics.ListAPIView):
+    serializer_class = HistoricoAtivoSerializer
+
+    def get_queryset(self):
+        codigo = self.kwargs.get('codigo')
+        queryset = HistoricoAtivo.objects.filter(ativo__codigo=codigo).order_by('data')
+        data_inicio = self.request.query_params.get('data_inicio')
+        if data_inicio:
+            queryset = queryset.filter(data__gte=data_inicio)
+        return queryset
 

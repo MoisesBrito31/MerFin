@@ -57,3 +57,17 @@ class Ativo(models.Model):
     def __str__(self):
         return f'{self.codigo} - {self.nome}'
 
+
+class HistoricoAtivo(models.Model):
+    ativo = models.ForeignKey(Ativo, on_delete=models.CASCADE, related_name='historicos')
+    data = models.DateField()
+    preco_fechamento = models.DecimalField(max_digits=20, decimal_places=4)
+    volume = models.BigIntegerField(null=True, blank=True)
+
+    class Meta:
+        unique_together = ('ativo', 'data')
+        ordering = ['-data']
+
+    def __str__(self):
+        return f'{self.ativo.codigo} - {self.data} - {self.preco_fechamento}'
+
