@@ -11,6 +11,7 @@
       <b-navbar-nav>
         <b-button variant="info" @click="gourl('')" >Home</b-button>
         <b-button variant="info" @click="gourl('ativos')" >Ativos</b-button>
+        <b-button variant="info" @click="gourl('fiis')" >FIIs</b-button>
         <b-button variant="info" @click="gourl('page1')" >Pagina 1</b-button>
         <b-button variant="info" @click="gourl('page2')" >Pagina 2</b-button>
         <b-button variant="info" @click="gourl('login')" >Logar</b-button>

@@ -2,6 +2,7 @@ import Home from '@/views/HomeView.vue'
 import dataView from '@/views/os-data-View.vue'
 import estado from '@/views/estado-data-View.vue'
 import AtivosView from '@/views/AtivosView.vue'
+import FiiListView from '@/views/FiiListView.vue'
 import Login from '@/views/LoginView.vue'
 import Vue from 'vue'
 import Cookies from 'js-cookie'
@@ -28,6 +29,11 @@ const routes = [
   {
     path: '/ativos',
     component: AtivosView,
+    meta: { requiresAuth: true }
+  },
+  {
+    path: '/fiis',
+    component: FiiListView,
     meta: { requiresAuth: true }
   },
   {
