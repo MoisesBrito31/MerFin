@@ -1,5 +1,14 @@
 from django.contrib import admin
-from .models import Ativo, Setor, Segmento, HistoricoAtivo
+from .models import (
+    Ativo,
+    Setor,
+    Segmento,
+    HistoricoAtivo,
+    FundoImobiliario,
+    FIIHistoricoPreco,
+    FIIRendimento,
+    FIIDividendYield,
+)
 
 @admin.register(Setor)
 class SetorAdmin(admin.ModelAdmin):
@@ -19,3 +28,53 @@ class AtivoAdmin(admin.ModelAdmin):
     ordering = ('codigo',)
 
 admin.site.register(HistoricoAtivo)
+
+
+@admin.register(FundoImobiliario)
+class FundoImobiliarioAdmin(admin.ModelAdmin):
+    list_display = (
+        'codigo',
+        'nome',
+        'segmento',
+        'administrador',
+        'gestao',
+        'mandato',
+        'publico_alvo',
+        'p_vp',
+        'valor_patrimonial_cota',
+        'patrimonio_liquido',
+        'liquidez_media_diaria',
+        'taxa_adm',
+        'taxa_perf',
+        'data_atualizacao',
+    )
+    search_fields = ('codigo', 'nome', 'cnpj')
+    list_filter = ('segmento',)
+    ordering = ('codigo',)
+
+
+@admin.register(FIIHistoricoPreco)
+class FIIHistoricoPrecoAdmin(admin.ModelAdmin):
+    list_display = ('fii', 'data', 'preco_fechamento', 'volume')
+    search_fields = ('fii__codigo',)
+    list_filter = ('fii',)
+    date_hierarchy = 'data'
+    ordering = ('-data',)
+
+
+@admin.register(FIIRendimento)
+class FIIRendimentoAdmin(admin.ModelAdmin):
+    list_display = ('fii', 'data', 'valor_rendimento')
+    search_fields = ('fii__codigo',)
+    list_filter = ('fii',)
+    date_hierarchy = 'data'
+    ordering = ('-data',)
+
+
+@admin.register(FIIDividendYield)
+class FIIDividendYieldAdmin(admin.ModelAdmin):
+    list_display = ('fii', 'data', 'dy')
+    search_fields = ('fii__codigo',)
+    list_filter = ('fii',)
+    date_hierarchy = 'data'
+    ordering = ('-data',)

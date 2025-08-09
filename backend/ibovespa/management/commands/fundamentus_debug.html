@@ -1,0 +1,2413 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt-br">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>FUNDAMENTUS - FII - VTLT11 - Distribuição de Rendimentos e Dividend Yield </title>
+	
+	<link rel="stylesheet" href="css/estilo.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+	<link rel="shortcut icon" href="img/fundamentus.ico" type="image/x-icon">
+	<!--[if lte IE 6]>
+		<link rel="stylesheet" type="text/css" href="css/menu_ie6.css">
+		<script type="text/javascript" src="script/ADxMenu.js"></script>
+	<![endif]-->
+	<!-- <script src="script/mootools.svn.js" type="text/javascript"></script>  -->
+<script src="//ajax.googleapis.com/ajax/libs/mootools/1.11/mootools-yui-compressed.js" type="text/javascript"></script>
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '180895865796070');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=180895865796070&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->	
+    <script type="text/javascript" src="script/Observer.js"></script>
+	<script type="text/javascript" src="script/Autocompleter.js"></script>
+	<script src="script/cmplte.php" type="text/javascript" language="JavaScript"></script>
+	
+	<script src="script/tip.js" type="text/javascript" language="JavaScript"></script>
+	<script type="text/javascript">
+		function poApple() { }
+	</script>	
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.24.0/dist/apexcharts.min.js"></script>
+</head>
+<body class="graficos">
+	<div class="center">
+		<?php#  echo $trace_txt;?>	<script>		function validateForm() {			let form = document.createElement('form');			form.action = 'detalhes.php';			form.method = 'GET';			form.innerHTML = '<input name="papel" type="hidden" value="'+document.forms[0]["papel"].value.toUpperCase()+'">';			document.body.append(form);			form.submit();			return false;		}	</script>		
+<style>
+  #menu.institucional li a.fundamentus-mobile { 
+    background-image: url(img/bt_fundamentus_mobile2.png); 
+    width: 97px; 
+  }
+  #menu.institucional li a.fundamentus-mobile:active { 
+    background-position: 0 0 !important;
+  }  
+
+</style>
+<div class="topo">
+   <a href="index.php"><img class="logo" src="img/logo.gif" alt="FUNDAMENTUS - Invista consciente"></a>			
+   <div class="avancada"><span>Busca por <a href="buscaavancada.php">empresa</a> / <a href="fii_buscaavancada.php">fii</a></span></div>
+   <form class="busca" method="get" action="detalhes.php" onsubmit="return validateForm() ">
+      <fieldset>
+         <legend>Procurar por ação/empresa/fii</legend>
+         <input class="texto" autocomplete="off" id="completar" name="papel" type="text" spellcheck="false"><input type="image" src="img/bt_exibir.jpg" class="botao" value="Exibir"><br>				
+      </fieldset>
+   </form>
+   <div class="atual"><p>Você está vendo<strong>VTLT11</strong></p></div>			
+   <div id="containerMenu">
+      <ul id="menu" class="institucional adxm menu">
+         <li><a class="home" href="index.php">Página inicial</a></li>
+         <!--- <li><a class="conheca" href="conheca.php">Conheça o sistema</a></li> --->					
+         <li><a class="consciente" href="consciente.php">Investimento consciente</a></li>
+         <li>
+            <a class="mais-opcoes" onClick="poApple()">Mais Opções</a>
+            <ul>
+               <li><a href="fr.php">Fatos Relevantes</a></li>
+               <li><a href="ultimos-resultados.php">Últimos Resultados</a></li>
+               <li><a href="fii_imoveis.php">FII - Pesquisar Imóveis</a></li>
+            </ul>
+         </li>
+         <li><a class="contato" href="contato.php">Entre em contato</a></li>
+         <li><a class="fundamentus-mobile" href="?papel=VTLT11&tipo=1&interface=mobile">Fundamentus Mobile</a></li>
+      </ul>
+              <ul id="menu" class="software adxm menu">
+           <li><a class="detalhes" href="detalhes.php?papel=VTLT11">Detalhes</a></li>
+           <li>
+              <a class="graficos" onClick="poApple()" >Gráficos</a>						
+              <ul>
+                 <li><a href="fii_graficos.php?papel=VTLT11&tipo=1">Rendimentos</a></li>
+                 <li><a href="fii_graficos.php?papel=VTLT11&tipo=2">Demonstração Resultados</a></li>
+                 <li><a href="fii_graficos.php?papel=VTLT11&tipo=3">Valuation</a></li>
+              </ul>
+           </li>
+           <li>
+              <a class="historicos" onClick="poApple()">Dados Históricos</a>						
+              <ul class="provetos">
+                 <li><a class="dh" href="fii_imoveis_detalhes.php?papel=VTLT11">Imóveis</a></li>
+                 <li><a class="dh" href="fii_relatorios.php?papel=VTLT11">Relatórios Gerenciais</a></li>
+                 <li><a class="dh" href="fii_fatos_relevantes.php?papel=VTLT11">Fatos Relevantes</a></li>
+                 <li><a class="dh" href="fii_proventos.php?papel=VTLT11&tipo=2">Rendimentos</a></li>
+                 <li><a class="dh" href="fii_administrador.php?papel=VTLT11">Administrador</a></li>
+              </ul>
+           </li>
+           <li><a class="cotacoes" href="cotacoes.php?papel=VTLT11&tela=3">Histórico de cotações</a></li>
+           </li>				
+        </ul>
+         </div>
+</div>
+		<div class="conteudo clearfix">
+    <div style="margin-top:5px; margin-bottom:20px;">
+        <div style="height:90px">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3119085269630402"
+         crossorigin="anonymous"></script>
+    <!-- anuncioTopoGrafico -->
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:728px;height:90px"
+         data-ad-client="ca-pub-3119085269630402"
+         data-ad-slot="8726397494"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    </div>
+    </div>
+    
+      
+      <h2>Distribuição de Rendimentos (R$/cota)</h2>
+      <div id="chartRendimentos"></div>
+      <br>
+      <h2>Dividend Yield (%)</h2>
+      <div id="chartDivY"></div>
+    
+    
+		</div>
+	</div>
+
+<style>  
+#chart {
+  max-width: 760px;
+  margin: 35px auto;
+  opacity: 0.7;
+}
+
+.arrow_box {
+  position: relative;
+  background: #dfeaf0a3; 
+  border: 1px solid #77b2d2;
+  padding: 5px;
+  border-radius: 7px;
+  font-size: 14px;
+}
+.arrow_box:after, .arrow_box:before {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+/*  content: " ";*/
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.apexcharts-tooltip.apexcharts-theme-light {
+    border: 0px solid #e3e3e3;
+    background: rgba(255, 255, 255, 0);
+}
+
+.arrow_box:after {
+  border-color: rgba(85, 85, 85, 0);
+  border-right-color: #555;
+  border-width: 10px;
+  margin-top: -10px;
+}
+.arrow_box:before {
+  border-color: rgba(0, 0, 0, 0);
+  border-right-color: #000000;
+  border-width: 13px;
+  margin-top: -13px;
+}
+
+#chart .apexcharts-tooltip {
+  color: #fff;
+  transform: translateX(10px) translateY(10px);
+  overflow: visible !important;
+  white-space: normal !important;
+}
+
+#chart .apexcharts-tooltip span {
+  padding: 5px 10px;
+  display: inline-block;
+}
+</style>
+
+<script>
+  Apex.chart = {
+    locales: [
+      {
+        "name": "pt",
+        "options": {
+          "months": [
+            "Janeiro",
+            "Fevereiro",
+            "Março",
+            "Abril",
+            "Maio",
+            "Junho",
+            "Julho",
+            "Agosto",
+            "Setembro",
+            "Outubro",
+            "Novembro",
+            "Dezembro"
+          ],
+          "shortMonths": [
+            "Jan",
+            "Fev",
+            "Mar",
+            "Abr",
+            "Mai",
+            "Jun",
+            "Jul",
+            "Ago",
+            "Set",
+            "Out",
+            "Nov",
+            "Dez"
+          ],
+          "days": [
+            "Domingo",
+            "Segunda-feira",
+            "Terça-feira",
+            "Quarta-feira",
+            "Quinta-feira",
+            "Sexta-feira",
+            "Sábado"
+          ],
+          "shortDays": ["Do", "Se", "Te", "Qa", "Qi", "Sx", "Sa"],
+          "toolbar": {
+            "exportToSVG": "Baixar SVG",
+            "exportToPNG": "Baixar PNG",
+            "exportToCSV": "Baixar CSV",
+            "menu": "Menu",
+            "selection": "Selecionar",
+            "selectionZoom": "Zoom: Selecionar",
+            "zoomIn": "Zoom: Aumentar",
+            "zoomOut": "Zoom: Diminuir",
+            "pan": "Deslocamento",
+            "reset": "Redefinir"
+          }
+        }
+      } 
+    ],
+    defaultLocale: "pt"
+  };
+
+
+  function formataData( data ) {
+    dia  = data.getDate().toString().padStart(2, '0'),
+    mes  = (data.getMonth()+1).toString().padStart(2, '0'), //+1 pois no getMonth Janeiro começa com zero.
+    ano  = data.getFullYear();
+    return /*dia+"/"+*/mes+"/"+ano;
+  }
+  function formataDataDMY( data ) {
+    dia  = data.getDate().toString().padStart(2, '0'),
+    mes  = (data.getMonth()+1).toString().padStart(2, '0'), //+1 pois no getMonth Janeiro começa com zero.
+    ano  = data.getFullYear();
+    return dia+"/"+mes+"/"+ano;
+  }
+
+  
+  
+
+  
+
+  var dataSerieRendimento = [];
+  var dataSerieRendimento12m = [];
+  var labelsRendimento = [];
+      dataSerieRendimento.push(0.666666667000000);  
+    labelsRendimento.push(1522551600000);
+      dataSerieRendimento.push(0.666666667000000);  
+    labelsRendimento.push(1525143600000);
+      dataSerieRendimento.push(0.666666667000000);  
+    labelsRendimento.push(1527822000000);
+      dataSerieRendimento.push(0.666666667000000);  
+    labelsRendimento.push(1530414000000);
+      dataSerieRendimento.push(0.666666667000000);  
+    labelsRendimento.push(1533092400000);
+      dataSerieRendimento.push(0.666666667000000);  
+    labelsRendimento.push(1535770800000);
+      dataSerieRendimento.push(0.666666667000000);  
+    labelsRendimento.push(1538362800000);
+      dataSerieRendimento.push(0.666666667000000);  
+    labelsRendimento.push(1541041200000);
+      dataSerieRendimento.push(1.406666667000000);  
+    labelsRendimento.push(1543629600000);
+      dataSerieRendimento.push(0.691700000000000);  
+    labelsRendimento.push(1548986400000);
+      dataSerieRendimento.push(0.691700000000000);  
+    labelsRendimento.push(1551409200000);
+      dataSerieRendimento.push(0.691700000000000);  
+    labelsRendimento.push(1554087600000);
+      dataSerieRendimento.push(0.691700000000000);  
+    labelsRendimento.push(1556679600000);
+      dataSerieRendimento.push(1.383400000000000);  
+    labelsRendimento.push(1559358000000);
+      dataSerieRendimento.push(0.691700000000000);  
+    labelsRendimento.push(1561950000000);
+      dataSerieRendimento.push(0.691700000000000);  
+    labelsRendimento.push(1564628400000);
+      dataSerieRendimento.push(0.691700000000000);  
+    labelsRendimento.push(1567306800000);
+      dataSerieRendimento.push(0.691700000000000);  
+    labelsRendimento.push(1569898800000);
+      dataSerieRendimento.push(0.691700000000000);  
+    labelsRendimento.push(1575169200000);
+      dataSerieRendimento.push(0.691700000000000);  
+    labelsRendimento.push(1575169200000);
+      dataSerieRendimento.push(0.721500000000000);  
+    labelsRendimento.push(1577847600000);
+      dataSerieRendimento.push(0.721500000000000);  
+    labelsRendimento.push(1580526000000);
+      dataSerieRendimento.push(0.721500000000000);  
+    labelsRendimento.push(1583031600000);
+      dataSerieRendimento.push(0.721500000000000);  
+    labelsRendimento.push(1585710000000);
+      dataSerieRendimento.push(0.721500000000000);  
+    labelsRendimento.push(1588302000000);
+      dataSerieRendimento.push(0.721500000000000);  
+    labelsRendimento.push(1593572400000);
+      dataSerieRendimento.push(0.721500000000000);  
+    labelsRendimento.push(1596250800000);
+      dataSerieRendimento.push(0.721500000000000);  
+    labelsRendimento.push(1598929200000);
+      dataSerieRendimento.push(0.721500000000000);  
+    labelsRendimento.push(1601521200000);
+      dataSerieRendimento.push(0.721500000000000);  
+    labelsRendimento.push(1604199600000);
+      dataSerieRendimento.push(0.721500000000000);  
+    labelsRendimento.push(1606791600000);
+      dataSerieRendimento.push(0.754100000000000);  
+    labelsRendimento.push(1609470000000);
+      dataSerieRendimento.push(0.754100000000000);  
+    labelsRendimento.push(1612148400000);
+      dataSerieRendimento.push(0.754100000000000);  
+    labelsRendimento.push(1614567600000);
+      dataSerieRendimento.push(0.754100000000000);  
+    labelsRendimento.push(1617246000000);
+      dataSerieRendimento.push(0.754100000000000);  
+    labelsRendimento.push(1619838000000);
+      dataSerieRendimento.push(0.754100000000000);  
+    labelsRendimento.push(1622516400000);
+      dataSerieRendimento.push(0.754100000000000);  
+    labelsRendimento.push(1625108400000);
+      dataSerieRendimento.push(0.754100000000000);  
+    labelsRendimento.push(1627786800000);
+      dataSerieRendimento.push(0.754100000000000);  
+    labelsRendimento.push(1630465200000);
+      dataSerieRendimento.push(0.750000000000000);  
+    labelsRendimento.push(1633057200000);
+      dataSerieRendimento.push(0.750000000000000);  
+    labelsRendimento.push(1635735600000);
+      dataSerieRendimento.push(0.750000000000000);  
+    labelsRendimento.push(1638327600000);
+      dataSerieRendimento.push(0.830000000000000);  
+    labelsRendimento.push(1641006000000);
+      dataSerieRendimento.push(0.830000000000000);  
+    labelsRendimento.push(1643684400000);
+      dataSerieRendimento.push(0.830000000000000);  
+    labelsRendimento.push(1646103600000);
+      dataSerieRendimento.push(0.830000000000000);  
+    labelsRendimento.push(1648782000000);
+      dataSerieRendimento.push(0.830000000000000);  
+    labelsRendimento.push(1651374000000);
+      dataSerieRendimento.push(0.830000000000000);  
+    labelsRendimento.push(1654052400000);
+      dataSerieRendimento.push(0.830000000000000);  
+    labelsRendimento.push(1656644400000);
+      dataSerieRendimento.push(0.830000000000000);  
+    labelsRendimento.push(1659322800000);
+      dataSerieRendimento.push(0.830000000000000);  
+    labelsRendimento.push(1662001200000);
+      dataSerieRendimento.push(0.830000000000000);  
+    labelsRendimento.push(1664593200000);
+      dataSerieRendimento.push(0.830000000000000);  
+    labelsRendimento.push(1667271600000);
+      dataSerieRendimento.push(0.830000000000000);  
+    labelsRendimento.push(1669863600000);
+      dataSerieRendimento.push(0.880000000000000);  
+    labelsRendimento.push(1672542000000);
+      dataSerieRendimento.push(0.880000000000000);  
+    labelsRendimento.push(1675220400000);
+      dataSerieRendimento.push(0.880000000000000);  
+    labelsRendimento.push(1677639600000);
+      dataSerieRendimento.push(0.880000000000000);  
+    labelsRendimento.push(1680318000000);
+      dataSerieRendimento.push(0.880000000000000);  
+    labelsRendimento.push(1682910000000);
+      dataSerieRendimento.push(0.880000000000000);  
+    labelsRendimento.push(1685588400000);
+      dataSerieRendimento.push(0.880000000000000);  
+    labelsRendimento.push(1688180400000);
+      dataSerieRendimento.push(0.880000000000000);  
+    labelsRendimento.push(1690858800000);
+      dataSerieRendimento.push(0.880000000000000);  
+    labelsRendimento.push(1693537200000);
+      dataSerieRendimento.push(0.880000000000000);  
+    labelsRendimento.push(1696129200000);
+      dataSerieRendimento.push(0.880000000000000);  
+    labelsRendimento.push(1698807600000);
+      dataSerieRendimento.push(0.890000000000000);  
+    labelsRendimento.push(1701399600000);
+      dataSerieRendimento.push(0.930000000000000);  
+    labelsRendimento.push(1704078000000);
+      dataSerieRendimento.push(0.930000000000000);  
+    labelsRendimento.push(1706756400000);
+      dataSerieRendimento.push(0.930000000000000);  
+    labelsRendimento.push(1709262000000);
+      dataSerieRendimento.push(0.930000000000000);  
+    labelsRendimento.push(1711940400000);
+      dataSerieRendimento.push(0.930000000000000);  
+    labelsRendimento.push(1714532400000);
+      dataSerieRendimento.push(0.930000000000000);  
+    labelsRendimento.push(1717210800000);
+      dataSerieRendimento.push(0.930000000000000);  
+    labelsRendimento.push(1719802800000);
+      dataSerieRendimento.push(0.930000000000000);  
+    labelsRendimento.push(1722481200000);
+      dataSerieRendimento.push(0.930000000000000);  
+    labelsRendimento.push(1725159600000);
+      dataSerieRendimento.push(0.930000000000000);  
+    labelsRendimento.push(1727751600000);
+      dataSerieRendimento.push(0.930000000000000);  
+    labelsRendimento.push(1730430000000);
+      dataSerieRendimento.push(0.930000000000000);  
+    labelsRendimento.push(1733022000000);
+      dataSerieRendimento.push(0.970000000000000);  
+    labelsRendimento.push(1735700400000);
+      dataSerieRendimento.push(0.970000000000000);  
+    labelsRendimento.push(1738378800000);
+      dataSerieRendimento.push(0.970000000000000);  
+    labelsRendimento.push(1740798000000);
+      dataSerieRendimento.push(0.970000000000000);  
+    labelsRendimento.push(1743476400000);
+      dataSerieRendimento.push(0.990000000000000);  
+    labelsRendimento.push(1746068400000);
+      dataSerieRendimento.push(0.990000000000000);  
+    labelsRendimento.push(1748746800000);
+      dataSerieRendimento.push(1.030000000000000);  
+    labelsRendimento.push(1751338800000);
+      
+  
+  var soma = 0;
+  for (var i = 0; i < dataSerieRendimento.length; i++) {
+    soma += dataSerieRendimento[i];
+    if (i >= 12) {
+      soma -= dataSerieRendimento[i-12];
+      dataSerieRendimento12m.push(soma/12);
+    } else {
+      dataSerieRendimento12m.push(null);
+    }
+  }
+    
+  var optionsRendimento = {
+    series: [
+      { name: "Rendimentos", type: "bar", data: dataSerieRendimento },
+      /*{ name: "Média últimos 12 meses", type: "line", data: dataSerieRendimento12m },*/
+    ],
+    colors: ['#77b2d2','#315b68cc'], 
+    stroke: {
+      width: [0.5, 1.5],
+      colors: ['#fff', '#315b68cc'],
+    },
+    labels: labelsRendimento,
+    chart: {
+      type: 'line',
+      height: 400,
+      width: '75%',
+      toolbar : {
+        show: false,
+      },
+      sparkline: { enabled: false },
+      zoom: { enabled: false }
+    },
+    xaxis: {
+      type: 'datetime',
+      show: true,
+      range : 6*365*24*60*60*1000,
+      axisBorder: {
+        show: true
+      },
+      axisTicks: {
+        show: true
+      },
+      tooltip: {
+        enabled: false,
+      },
+      labels: {
+        show : true,
+        datetimeFormatter: {
+          year: 'yyyy',
+          month: 'MMM \'yy',
+          day: 'dd MMM',
+          hour: 'HH:mm'
+        }
+      },
+    },
+    yaxis: {
+      min: 0,
+      show: true,
+      labels :  {
+        show : true,
+      },
+      tickAmount: 8,
+      axisBorder: {
+        show: true
+      },
+      axisTicks: {
+        show: true
+      },
+      labels : {
+        formatter: function(val, index) {
+          if (val==null) 
+            return val;
+          else
+            return val.toFixed(2).replace('.',',');
+        }
+      }
+    },
+    fill: {
+      opacity: 1
+    },
+    grid: {
+      padding: {
+       top: 0,
+       bottom: 0,
+       left: 0,
+       right: 0
+      }
+    },
+    legend: {
+      show: true,
+      position: 'bottom',
+      horizontalAlign: 'center',
+      offsetX: 0,
+      offsetY: 0
+    },
+    dataLabels: {
+      enabled : false,
+      formatter : function (val, opts) {
+        return val.toFixed(2).replace('.',',');
+      }
+    },
+    tooltip: {
+      enabled : true,
+      followCursor : false,
+      intersect : false,
+      onDatasetHover: {
+          highlightDataSeries: false,
+      },
+      custom: function({series, seriesIndex, dataPointIndex, w}) {
+          return '<div class="arrow_box"><div>'+formataData(new Date(w.globals.seriesX[0][dataPointIndex])) +'</div>'+
+            '<span>R$ ' + (Math.round(series[seriesIndex][dataPointIndex] * 100) / 100).toFixed(2).replace('.',',') + '</span>' +
+            '</div>';
+      },
+    },
+  };
+
+    var chartRendimentos = new ApexCharts(document.querySelector("#chartRendimentos"), optionsRendimento);
+    chartRendimentos.render();
+
+
+
+
+        
+  function alterarSerie( ) {
+    var checkBox = document.getElementById("chbffoAnual");
+    
+    if (checkBox.checked) {
+      newOption = {
+        series: [
+          { name: "FFO", data: dataSerieFFO12m },
+          { name: "Dividendos", data: dataSerieDividendo12m } 
+        ],
+        labels: labelsFFO12m,
+      };
+    } else {
+      newOption = {
+        series: [
+          { name: "FFO", data: dataSerieFFO },
+          { name: "Dividendos", data: dataSerieDividendo } 
+        ],
+        labels: labelsFFO,
+      };
+    }
+    
+    chartFFO.updateOptions(newOption);
+  }
+
+  
+    
+  var dataSerieDividendYield = [
+     [  1556593200000 , 0.0870941  ],
+     [  1556766000000 , 0.0799513  ],
+     [  1556852400000 , 0.080032  ],
+     [  1557111600000 , 0.0803476  ],
+     [  1557198000000 , 0.080077  ],
+     [  1557370800000 , 0.080077  ],
+     [  1557457200000 , 0.080032  ],
+     [  1557716400000 , 0.0807386  ],
+     [  1557889200000 , 0.0803476  ],
+     [  1557975600000 , 0.08005  ],
+     [  1558062000000 , 0.0803476  ],
+     [  1558321200000 , 0.080032  ],
+     [  1558407600000 , 0.0802662  ],
+     [  1558494000000 , 0.0799782  ],
+     [  1558580400000 , 0.0803476  ],
+     [  1558666800000 , 0.0803476  ],
+     [  1558926000000 , 0.0803476  ],
+     [  1559012400000 , 0.0803476  ],
+     [  1559098800000 , 0.0803476  ],
+     [  1559185200000 , 0.0803476  ],
+     [  1559271600000 , 0.087783  ],
+     [  1559530800000 , 0.0806045  ],
+     [  1559617200000 , 0.0805955  ],
+     [  1559703600000 , 0.0805955  ],
+     [  1559790000000 , 0.0805955  ],
+     [  1559876400000 , 0.0805955  ],
+     [  1560135600000 , 0.0806677  ],
+     [  1560222000000 , 0.0806316  ],
+     [  1560308400000 , 0.0808397  ],
+     [  1560394800000 , 0.0808397  ],
+     [  1560481200000 , 0.0805955  ],
+     [  1560740400000 , 0.0805955  ],
+     [  1560826800000 , 0.0805955  ],
+     [  1560913200000 , 0.0809942  ],
+     [  1561086000000 , 0.0808397  ],
+     [  1561345200000 , 0.0809942  ],
+     [  1561431600000 , 0.0806316  ],
+     [  1561518000000 , 0.0809123  ],
+     [  1561604400000 , 0.0807491  ],
+     [  1561690800000 , 0.0956441  ],
+     [  1561950000000 , 0.087928  ],
+     [  1562036400000 , 0.0880158  ],
+     [  1562122800000 , 0.0878404  ],
+     [  1562209200000 , 0.0877433  ],
+     [  1562295600000 , 0.0879767  ],
+     [  1562554800000 , 0.088006  ],
+     [  1562727600000 , 0.0878502  ],
+     [  1562814000000 , 0.088006  ],
+     [  1562900400000 , 0.088006  ],
+     [  1563159600000 , 0.0874822  ],
+     [  1563246000000 , 0.0872227  ],
+     [  1563332400000 , 0.0877433  ],
+     [  1563418800000 , 0.0874822  ],
+     [  1563505200000 , 0.088006  ],
+     [  1563764400000 , 0.087928  ],
+     [  1563850800000 , 0.0878793  ],
+     [  1563937200000 , 0.087928  ],
+     [  1564023600000 , 0.0874822  ],
+     [  1564110000000 , 0.088006  ],
+     [  1564369200000 , 0.0879963  ],
+     [  1564455600000 , 0.0877142  ],
+     [  1564542000000 , 0.0956379  ],
+     [  1564628400000 , 0.0883418  ],
+     [  1564714800000 , 0.0883126  ],
+     [  1564974000000 , 0.0883126  ],
+     [  1565060400000 , 0.0883223  ],
+     [  1565146800000 , 0.0883126  ],
+     [  1565233200000 , 0.0883223  ],
+     [  1565319600000 , 0.0883126  ],
+     [  1565578800000 , 0.0883223  ],
+     [  1565665200000 , 0.0883126  ],
+     [  1565751600000 , 0.0883418  ],
+     [  1565838000000 , 0.0883029  ],
+     [  1565924400000 , 0.0884002  ],
+     [  1566183600000 , 0.0883515  ],
+     [  1566270000000 , 0.0883223  ],
+     [  1566356400000 , 0.0883126  ],
+     [  1566442800000 , 0.0883126  ],
+     [  1566529200000 , 0.0881379  ],
+     [  1566788400000 , 0.0883126  ],
+     [  1566874800000 , 0.0883126  ],
+     [  1566961200000 , 0.0883321  ],
+     [  1567047600000 , 0.0882349  ],
+     [  1567134000000 , 0.0958194  ],
+     [  1567393200000 , 0.0885498  ],
+     [  1567479600000 , 0.0885498  ],
+     [  1567566000000 , 0.0885498  ],
+     [  1567652400000 , 0.0885788  ],
+     [  1567738800000 , 0.0885498  ],
+     [  1567998000000 , 0.0885788  ],
+     [  1568084400000 , 0.0884434  ],
+     [  1568170800000 , 0.0882217  ],
+     [  1568257200000 , 0.0884337  ],
+     [  1568343600000 , 0.0885788  ],
+     [  1568602800000 , 0.0885594  ],
+     [  1568689200000 , 0.0885788  ],
+     [  1568775600000 , 0.0885788  ],
+     [  1568862000000 , 0.0885691  ],
+     [  1568948400000 , 0.0885594  ],
+     [  1569207600000 , 0.088241  ],
+     [  1569294000000 , 0.0885594  ],
+     [  1569380400000 , 0.0885498  ],
+     [  1569466800000 , 0.0883854  ],
+     [  1569553200000 , 0.0882794  ],
+     [  1569812400000 , 0.0956158  ],
+     [  1569898800000 , 0.0883562  ],
+     [  1569985200000 , 0.0884422  ],
+     [  1570071600000 , 0.0885859  ],
+     [  1570158000000 , 0.0885476  ],
+     [  1570417200000 , 0.0886051  ],
+     [  1570503600000 , 0.0887013  ],
+     [  1570590000000 , 0.0884518  ],
+     [  1570676400000 , 0.0883562  ],
+     [  1570762800000 , 0.0884901  ],
+     [  1571022000000 , 0.0883562  ],
+     [  1571108400000 , 0.0883562  ],
+     [  1571194800000 , 0.088318  ],
+     [  1571281200000 , 0.0883562  ],
+     [  1571367600000 , 0.0883753  ],
+     [  1571626800000 , 0.088318  ],
+     [  1571713200000 , 0.0879285  ],
+     [  1571799600000 , 0.0875613  ],
+     [  1571886000000 , 0.0874863  ],
+     [  1571972400000 , 0.0872343  ],
+     [  1572231600000 , 0.0866242  ],
+     [  1572318000000 , 0.0866334  ],
+     [  1572404400000 , 0.084581  ],
+     [  1572490800000 , 0.0917358  ],
+     [  1572577200000 , 0.0856677  ],
+     [  1572836400000 , 0.0848577  ],
+     [  1572922800000 , 0.084243  ],
+     [  1573009200000 , 0.0840543  ],
+     [  1573095600000 , 0.0836371  ],
+     [  1573182000000 , 0.0843548  ],
+     [  1573441200000 , 0.0843032  ],
+     [  1573527600000 , 0.082674  ],
+     [  1573614000000 , 0.0831151  ],
+     [  1573700400000 , 0.0823524  ],
+     [  1574046000000 , 0.0828732  ],
+     [  1574132400000 , 0.0806392  ],
+     [  1574305200000 , 0.0809873  ],
+     [  1574391600000 , 0.0817328  ],
+     [  1574650800000 , 0.0802552  ],
+     [  1574737200000 , 0.0802552  ],
+     [  1574823600000 , 0.0792233  ],
+     [  1574910000000 , 0.080592  ],
+     [  1574996400000 , 0.0788375  ],
+     [  1575255600000 , 0.0796835  ],
+     [  1575342000000 , 0.0794782  ],
+     [  1575428400000 , 0.0789211  ],
+     [  1575514800000 , 0.0790559  ],
+     [  1575601200000 , 0.0790559  ],
+     [  1575860400000 , 0.0790634  ],
+     [  1575946800000 , 0.0794101  ],
+     [  1576033200000 , 0.0797674  ],
+     [  1576119600000 , 0.0801203  ],
+     [  1576206000000 , 0.0797674  ],
+     [  1576465200000 , 0.0794101  ],
+     [  1576551600000 , 0.0796759  ],
+     [  1576638000000 , 0.0764304  ],
+     [  1576724400000 , 0.0757631  ],
+     [  1576810800000 , 0.0776847  ],
+     [  1577070000000 , 0.0765498  ],
+     [  1577329200000 , 0.0769741  ],
+     [  1577415600000 , 0.0751006  ],
+     [  1577674800000 , 0.0820211  ],
+     [  1577934000000 , 0.0672233  ],
+     [  1578020400000 , 0.0664084  ],
+     [  1578279600000 , 0.0645924  ],
+     [  1578366000000 , 0.066649  ],
+     [  1578452400000 , 0.0664827  ],
+     [  1578538800000 , 0.0664884  ],
+     [  1578625200000 , 0.0669494  ],
+     [  1578884400000 , 0.0664084  ],
+     [  1578970800000 , 0.0666778  ],
+     [  1579057200000 , 0.0664255  ],
+     [  1579143600000 , 0.0666778  ],
+     [  1579230000000 , 0.0666778  ],
+     [  1579489200000 , 0.0684202  ],
+     [  1579575600000 , 0.0674935  ],
+     [  1579662000000 , 0.0679387  ],
+     [  1579748400000 , 0.067276  ],
+     [  1579834800000 , 0.0683354  ],
+     [  1580094000000 , 0.06946  ],
+     [  1580180400000 , 0.0696416  ],
+     [  1580266800000 , 0.0704355  ],
+     [  1580353200000 , 0.0701094  ],
+     [  1580439600000 , 0.0769781  ],
+     [  1580698800000 , 0.0765041  ],
+     [  1580785200000 , 0.0765249  ],
+     [  1580871600000 , 0.0765041  ],
+     [  1580958000000 , 0.0765041  ],
+     [  1581044400000 , 0.0752302  ],
+     [  1581303600000 , 0.075988  ],
+     [  1581390000000 , 0.0765041  ],
+     [  1581476400000 , 0.0758584  ],
+     [  1581562800000 , 0.0759198  ],
+     [  1581649200000 , 0.077168  ],
+     [  1581908400000 , 0.0765041  ],
+     [  1581994800000 , 0.0774581  ],
+     [  1582081200000 , 0.0768381  ],
+     [  1582167600000 , 0.0760222  ],
+     [  1582254000000 , 0.0761868  ],
+     [  1582686000000 , 0.0769011  ],
+     [  1582772400000 , 0.0771821  ],
+     [  1582858800000 , 0.0773194  ],
+     [  1583118000000 , 0.0761255  ],
+     [  1583204400000 , 0.0748495  ],
+     [  1583290800000 , 0.0748495  ],
+     [  1583377200000 , 0.0751595  ],
+     [  1583463600000 , 0.0754721  ],
+     [  1583722800000 , 0.0780982  ],
+     [  1583809200000 , 0.0774247  ],
+     [  1583895600000 , 0.0761255  ],
+     [  1583982000000 , 0.0823988  ],
+     [  1584068400000 , 0.0816572  ],
+     [  1584327600000 , 0.0862745  ],
+     [  1584414000000 , 0.0872007  ],
+     [  1584500400000 , 0.100912  ],
+     [  1584586800000 , 0.10795  ],
+     [  1584673200000 , 0.102649  ],
+     [  1584932400000 , 0.102649  ],
+     [  1585018800000 , 0.0955534  ],
+     [  1585105200000 , 0.0872185  ],
+     [  1585191600000 , 0.087281  ],
+     [  1585278000000 , 0.0872007  ],
+     [  1585537200000 , 0.0839396  ],
+     [  1585623600000 , 0.0831071  ],
+     [  1585710000000 , 0.0819293  ],
+     [  1585796400000 , 0.0804675  ],
+     [  1585882800000 , 0.0802875  ],
+     [  1586142000000 , 0.0780753  ],
+     [  1586228400000 , 0.0789845  ],
+     [  1586314800000 , 0.0819293  ],
+     [  1586401200000 , 0.0834452  ],
+     [  1586746800000 , 0.0819293  ],
+     [  1586833200000 , 0.083835  ],
+     [  1586919600000 , 0.0849344  ],
+     [  1587006000000 , 0.0862785  ],
+     [  1587092400000 , 0.0859171  ],
+     [  1587351600000 , 0.0859085  ],
+     [  1587524400000 , 0.0859171  ],
+     [  1587610800000 , 0.0858315  ],
+     [  1587697200000 , 0.0859085  ],
+     [  1587956400000 , 0.0858315  ],
+     [  1588042800000 , 0.0862267  ],
+     [  1588129200000 , 0.0859171  ],
+     [  1588215600000 , 0.086706  ],
+     [  1588561200000 , 0.0861054  ],
+     [  1588647600000 , 0.0861054  ],
+     [  1588734000000 , 0.0861054  ],
+     [  1588820400000 , 0.0861054  ],
+     [  1588906800000 , 0.0861651  ],
+     [  1589166000000 , 0.0861054  ],
+     [  1589252400000 , 0.0861907  ],
+     [  1589338800000 , 0.086525  ],
+     [  1589425200000 , 0.0869399  ],
+     [  1589511600000 , 0.0869486  ],
+     [  1589770800000 , 0.0828744  ],
+     [  1589857200000 , 0.0861566  ],
+     [  1589943600000 , 0.0864906  ],
+     [  1590030000000 , 0.0861054  ],
+     [  1590116400000 , 0.0877819  ],
+     [  1590375600000 , 0.0882537  ],
+     [  1590462000000 , 0.0882537  ],
+     [  1590548400000 , 0.0882537  ],
+     [  1590634800000 , 0.0882537  ],
+     [  1590721200000 , 0.0891214  ],
+     [  1590980400000 , 0.0885023  ],
+     [  1591066800000 , 0.0885023  ],
+     [  1591153200000 , 0.0885023  ],
+     [  1591239600000 , 0.0876465  ],
+     [  1591326000000 , 0.0863976  ],
+     [  1591585200000 , 0.0839956  ],
+     [  1591671600000 , 0.0806367  ],
+     [  1591758000000 , 0.081068  ],
+     [  1591930800000 , 0.0813681  ],
+     [  1592190000000 , 0.0813606  ],
+     [  1592276400000 , 0.0813606  ],
+     [  1592362800000 , 0.0817236  ],
+     [  1592449200000 , 0.081353  ],
+     [  1592535600000 , 0.0812778  ],
+     [  1592794800000 , 0.0812178  ],
+     [  1592881200000 , 0.0813455  ],
+     [  1592967600000 , 0.0813154  ],
+     [  1593054000000 , 0.0804228  ],
+     [  1593140400000 , 0.0809933  ],
+     [  1593399600000 , 0.0810008  ],
+     [  1593486000000 , 0.080276  ],
+     [  1593572400000 , 0.0691238  ],
+     [  1593658800000 , 0.0688372  ],
+     [  1593745200000 , 0.0688118  ],
+     [  1594004400000 , 0.0689961  ],
+     [  1594090800000 , 0.0688181  ],
+     [  1594177200000 , 0.0688118  ],
+     [  1594263600000 , 0.0688372  ],
+     [  1594350000000 , 0.0688435  ],
+     [  1594609200000 , 0.06866  ],
+     [  1594695600000 , 0.0695745  ],
+     [  1594782000000 , 0.069342  ],
+     [  1594868400000 , 0.0700377  ],
+     [  1594954800000 , 0.0691238  ],
+     [  1595214000000 , 0.0693742  ],
+     [  1595300400000 , 0.0688689  ],
+     [  1595386800000 , 0.0691174  ],
+     [  1595473200000 , 0.0691238  ],
+     [  1595559600000 , 0.0691366  ],
+     [  1595818800000 , 0.0693227  ],
+     [  1595905200000 , 0.0689388  ],
+     [  1595991600000 , 0.0688118  ],
+     [  1596078000000 , 0.0688308  ],
+     [  1596164400000 , 0.075057  ],
+     [  1596423600000 , 0.0691518  ],
+     [  1596510000000 , 0.0692406  ],
+     [  1596596400000 , 0.0695084  ],
+     [  1596682800000 , 0.069019  ],
+     [  1596769200000 , 0.0690758  ],
+     [  1597028400000 , 0.0687674  ],
+     [  1597114800000 , 0.0687048  ],
+     [  1597201200000 , 0.06795  ],
+     [  1597287600000 , 0.0680726  ],
+     [  1597374000000 , 0.0678584  ],
+     [  1597633200000 , 0.067895  ],
+     [  1597719600000 , 0.0678279  ],
+     [  1597806000000 , 0.068042  ],
+     [  1597892400000 , 0.0680358  ],
+     [  1597978800000 , 0.0679378  ],
+     [  1598238000000 , 0.0679807  ],
+     [  1598324400000 , 0.0681279  ],
+     [  1598410800000 , 0.0680113  ],
+     [  1598497200000 , 0.0680113  ],
+     [  1598583600000 , 0.0680174  ],
+     [  1598842800000 , 0.0746234  ],
+     [  1598929200000 , 0.0674626  ],
+     [  1599015600000 , 0.0678288  ],
+     [  1599102000000 , 0.0679073  ],
+     [  1599188400000 , 0.0679921  ],
+     [  1599534000000 , 0.0667188  ],
+     [  1599620400000 , 0.066912  ],
+     [  1599706800000 , 0.0658145  ],
+     [  1599793200000 , 0.0654473  ],
+     [  1600052400000 , 0.0658202  ],
+     [  1600138800000 , 0.0657237  ],
+     [  1600225200000 , 0.066117  ],
+     [  1600311600000 , 0.0662434  ],
+     [  1600398000000 , 0.0658202  ],
+     [  1600657200000 , 0.0658145  ],
+     [  1600743600000 , 0.0658145  ],
+     [  1600830000000 , 0.0661974  ],
+     [  1600916400000 , 0.0660083  ],
+     [  1601002800000 , 0.0660254  ],
+     [  1601262000000 , 0.0663068  ],
+     [  1601348400000 , 0.0658088  ],
+     [  1601434800000 , 0.0717272  ],
+     [  1601521200000 , 0.0660673  ],
+     [  1601607600000 , 0.0649683  ],
+     [  1601866800000 , 0.0662332  ],
+     [  1601953200000 , 0.0662332  ],
+     [  1602039600000 , 0.0649798  ],
+     [  1602126000000 , 0.0658828  ],
+     [  1602212400000 , 0.066503  ],
+     [  1602558000000 , 0.065871  ],
+     [  1602644400000 , 0.0664489  ],
+     [  1602730800000 , 0.066678  ],
+     [  1602817200000 , 0.0670063  ],
+     [  1603076400000 , 0.0667689  ],
+     [  1603162800000 , 0.0666296  ],
+     [  1603249200000 , 0.065624  ],
+     [  1603335600000 , 0.0662332  ],
+     [  1603422000000 , 0.065624  ],
+     [  1603681200000 , 0.0657944  ],
+     [  1603767600000 , 0.0661795  ],
+     [  1603854000000 , 0.066275  ],
+     [  1603940400000 , 0.0665331  ],
+     [  1604026800000 , 0.0733341  ],
+     [  1604372400000 , 0.0672394  ],
+     [  1604458800000 , 0.0671785  ],
+     [  1604545200000 , 0.0677426  ],
+     [  1604631600000 , 0.0674655  ],
+     [  1604890800000 , 0.0666117  ],
+     [  1604977200000 , 0.0674594  ],
+     [  1605063600000 , 0.0670087  ],
+     [  1605150000000 , 0.0677364  ],
+     [  1605236400000 , 0.0673675  ],
+     [  1605495600000 , 0.0681156  ],
+     [  1605582000000 , 0.0681219  ],
+     [  1605668400000 , 0.0676747  ],
+     [  1605754800000 , 0.0680095  ],
+     [  1605841200000 , 0.0674655  ],
+     [  1606100400000 , 0.068354  ],
+     [  1606186800000 , 0.0681156  ],
+     [  1606273200000 , 0.0689253  ],
+     [  1606359600000 , 0.0686512  ],
+     [  1606446000000 , 0.0674778  ],
+     [  1606705200000 , 0.0736603  ],
+     [  1606791600000 , 0.0737269  ],
+     [  1606878000000 , 0.0742845  ],
+     [  1606964400000 , 0.0748644  ],
+     [  1607050800000 , 0.0752583  ],
+     [  1607310000000 , 0.0753975  ],
+     [  1607396400000 , 0.0755303  ],
+     [  1607482800000 , 0.0762224  ],
+     [  1607569200000 , 0.0754115  ],
+     [  1607655600000 , 0.0747134  ],
+     [  1607914800000 , 0.0744133  ],
+     [  1608001200000 , 0.0730137  ],
+     [  1608087600000 , 0.0735672  ],
+     [  1608174000000 , 0.0733158  ],
+     [  1608260400000 , 0.0725523  ],
+     [  1608519600000 , 0.0723977  ],
+     [  1608606000000 , 0.0733224  ],
+     [  1608692400000 , 0.0730792  ],
+     [  1609124400000 , 0.0725782  ],
+     [  1609210800000 , 0.0727336  ],
+     [  1609297200000 , 0.0733301  ],
+     [  1609729200000 , 0.0671319  ],
+     [  1609815600000 , 0.0668769  ],
+     [  1609902000000 , 0.0669065  ],
+     [  1609988400000 , 0.0678539  ],
+     [  1610074800000 , 0.0673889  ],
+     [  1610334000000 , 0.0679758  ],
+     [  1610420400000 , 0.0699609  ],
+     [  1610506800000 , 0.0700904  ],
+     [  1610593200000 , 0.0702139  ],
+     [  1610679600000 , 0.0701749  ],
+     [  1610938800000 , 0.0693965  ],
+     [  1611025200000 , 0.0692885  ],
+     [  1611111600000 , 0.0696263  ],
+     [  1611198000000 , 0.0694092  ],
+     [  1611284400000 , 0.0685668  ],
+     [  1611630000000 , 0.0691683  ],
+     [  1611716400000 , 0.0668828  ],
+     [  1611802800000 , 0.0668238  ],
+     [  1611889200000 , 0.0743614  ],
+     [  1612148400000 , 0.0676683  ],
+     [  1612234800000 , 0.0676683  ],
+     [  1612321200000 , 0.0688374  ],
+     [  1612407600000 , 0.0686274  ],
+     [  1612494000000 , 0.0683698  ],
+     [  1612753200000 , 0.0686459  ],
+     [  1612839600000 , 0.0682539  ],
+     [  1612926000000 , 0.0676683  ],
+     [  1613012400000 , 0.068572  ],
+     [  1613098800000 , 0.0691985  ],
+     [  1613530800000 , 0.0694434  ],
+     [  1613617200000 , 0.0682357  ],
+     [  1613703600000 , 0.0680294  ],
+     [  1613962800000 , 0.069111  ],
+     [  1614049200000 , 0.0679689  ],
+     [  1614135600000 , 0.0686212  ],
+     [  1614222000000 , 0.0688435  ],
+     [  1614308400000 , 0.0756607  ],
+     [  1614567600000 , 0.0696016  ],
+     [  1614654000000 , 0.0694328  ],
+     [  1614740400000 , 0.0698027  ],
+     [  1614826800000 , 0.0697712  ],
+     [  1614913200000 , 0.0697901  ],
+     [  1615172400000 , 0.0697901  ],
+     [  1615258800000 , 0.0709036  ],
+     [  1615345200000 , 0.0711909  ],
+     [  1615431600000 , 0.0707156  ],
+     [  1615518000000 , 0.0704642  ],
+     [  1615777200000 , 0.0704642  ],
+     [  1615863600000 , 0.0698216  ],
+     [  1615950000000 , 0.0698531  ],
+     [  1616036400000 , 0.0700937  ],
+     [  1616122800000 , 0.0698468  ],
+     [  1616382000000 , 0.0698468  ],
+     [  1616468400000 , 0.0711058  ],
+     [  1616554800000 , 0.0719929  ],
+     [  1616641200000 , 0.0709687  ],
+     [  1616727600000 , 0.0714078  ],
+     [  1616986800000 , 0.0715003  ],
+     [  1617073200000 , 0.0705929  ],
+     [  1617159600000 , 0.077763  ],
+     [  1617246000000 , 0.0712592  ],
+     [  1617591600000 , 0.0713243  ],
+     [  1617678000000 , 0.0722206  ],
+     [  1617764400000 , 0.0715987  ],
+     [  1617850800000 , 0.0722206  ],
+     [  1617937200000 , 0.0725558  ],
+     [  1618196400000 , 0.0720674  ],
+     [  1618282800000 , 0.0727314  ],
+     [  1618369200000 , 0.0725626  ],
+     [  1618455600000 , 0.0725558  ],
+     [  1618542000000 , 0.072274  ],
+     [  1618801200000 , 0.0725895  ],
+     [  1618887600000 , 0.0717499  ],
+     [  1619060400000 , 0.0721007  ],
+     [  1619146800000 , 0.0722273  ],
+     [  1619406000000 , 0.0721007  ],
+     [  1619492400000 , 0.0719017  ],
+     [  1619578800000 , 0.0721673  ],
+     [  1619665200000 , 0.0720342  ],
+     [  1619751600000 , 0.0791836  ],
+     [  1620010800000 , 0.0727134  ],
+     [  1620097200000 , 0.0731917  ],
+     [  1620183600000 , 0.0725532  ],
+     [  1620270000000 , 0.0725865  ],
+     [  1620356400000 , 0.0718081  ],
+     [  1620615600000 , 0.0721622  ],
+     [  1620702000000 , 0.0721293  ],
+     [  1620788400000 , 0.0724534  ],
+     [  1620874800000 , 0.0720438  ],
+     [  1620961200000 , 0.0719323  ],
+     [  1621220400000 , 0.071893  ],
+     [  1621306800000 , 0.0727871  ],
+     [  1621393200000 , 0.0726733  ],
+     [  1621479600000 , 0.0722018  ],
+     [  1621566000000 , 0.0725732  ],
+     [  1621825200000 , 0.0725732  ],
+     [  1621911600000 , 0.0729215  ],
+     [  1621998000000 , 0.0737244  ],
+     [  1622084400000 , 0.0728542  ],
+     [  1622170800000 , 0.0737106  ],
+     [  1622430000000 , 0.0809456  ],
+     [  1622516400000 , 0.0738214  ],
+     [  1622602800000 , 0.0740267  ],
+     [  1622775600000 , 0.0743574  ],
+     [  1623034800000 , 0.0744267  ],
+     [  1623121200000 , 0.074399  ],
+     [  1623207600000 , 0.0740953  ],
+     [  1623294000000 , 0.0745378  ],
+     [  1623380400000 , 0.0744961  ],
+     [  1623639600000 , 0.0741917  ],
+     [  1623726000000 , 0.0748521  ],
+     [  1623812400000 , 0.0743436  ],
+     [  1623898800000 , 0.0755887  ],
+     [  1623985200000 , 0.074782  ],
+     [  1624244400000 , 0.0751761  ],
+     [  1624330800000 , 0.0751974  ],
+     [  1624417200000 , 0.0754816  ],
+     [  1624503600000 , 0.0752257  ],
+     [  1624590000000 , 0.0788104  ],
+     [  1624849200000 , 0.0805426  ],
+     [  1624935600000 , 0.0776083  ],
+     [  1625022000000 , 0.0858238  ],
+     [  1625108400000 , 0.0845775  ],
+     [  1625194800000 , 0.084978  ],
+     [  1625454000000 , 0.0868578  ],
+     [  1625540400000 , 0.0862192  ],
+     [  1625626800000 , 0.0846101  ],
+     [  1625713200000 , 0.0863123  ],
+     [  1626058800000 , 0.085874  ],
+     [  1626145200000 , 0.0841648  ],
+     [  1626231600000 , 0.0842454  ],
+     [  1626318000000 , 0.0839078  ],
+     [  1626404400000 , 0.0829738  ],
+     [  1626663600000 , 0.083225  ],
+     [  1626750000000 , 0.082592  ],
+     [  1626836400000 , 0.0828565  ],
+     [  1626922800000 , 0.0826308  ],
+     [  1627009200000 , 0.084004  ],
+     [  1627268400000 , 0.08378  ],
+     [  1627354800000 , 0.0829816  ],
+     [  1627441200000 , 0.083764  ],
+     [  1627527600000 , 0.083764  ],
+     [  1627614000000 , 0.0828878  ],
+     [  1627873200000 , 0.0838245  ],
+     [  1627959600000 , 0.0841442  ],
+     [  1628046000000 , 0.0843129  ],
+     [  1628132400000 , 0.0844662  ],
+     [  1628218800000 , 0.0844662  ],
+     [  1628478000000 , 0.0856963  ],
+     [  1628564400000 , 0.0861396  ],
+     [  1628650800000 , 0.0870915  ],
+     [  1628737200000 , 0.0870485  ],
+     [  1628823600000 , 0.0879594  ],
+     [  1629082800000 , 0.0882761  ],
+     [  1629169200000 , 0.0891588  ],
+     [  1629255600000 , 0.0891588  ],
+     [  1629342000000 , 0.090262  ],
+     [  1629428400000 , 0.0891678  ],
+     [  1629687600000 , 0.0900686  ],
+     [  1629774000000 , 0.090133  ],
+     [  1629860400000 , 0.0898211  ],
+     [  1629946800000 , 0.090299  ],
+     [  1630033200000 , 0.0901146  ],
+     [  1630292400000 , 0.0910065  ],
+     [  1630378800000 , 0.0912724  ],
+     [  1630465200000 , 0.0942042  ],
+     [  1630551600000 , 0.0942042  ],
+     [  1630638000000 , 0.0949821  ],
+     [  1630897200000 , 0.0933405  ],
+     [  1631070000000 , 0.0937356  ],
+     [  1631156400000 , 0.0932422  ],
+     [  1631242800000 , 0.0932815  ],
+     [  1631502000000 , 0.093311  ],
+     [  1631588400000 , 0.0934784  ],
+     [  1631674800000 , 0.0936167  ],
+     [  1631761200000 , 0.0933011  ],
+     [  1631847600000 , 0.09337  ],
+     [  1632106800000 , 0.0937158  ],
+     [  1632193200000 , 0.0932815  ],
+     [  1632279600000 , 0.0934094  ],
+     [  1632366000000 , 0.0932324  ],
+     [  1632452400000 , 0.0935179  ],
+     [  1632711600000 , 0.0932324  ],
+     [  1632798000000 , 0.0933306  ],
+     [  1632884400000 , 0.0925601  ],
+     [  1632970800000 , 0.0943098  ],
+     [  1633057200000 , 0.0969221  ],
+     [  1633316400000 , 0.0966166  ],
+     [  1633402800000 , 0.0935554  ],
+     [  1633489200000 , 0.093046  ],
+     [  1633575600000 , 0.0930655  ],
+     [  1633662000000 , 0.09441  ],
+     [  1633921200000 , 0.0936342  ],
+     [  1634094000000 , 0.0936737  ],
+     [  1634180400000 , 0.0935554  ],
+     [  1634266800000 , 0.0902402  ],
+     [  1634526000000 , 0.0901304  ],
+     [  1634612400000 , 0.0931631  ],
+     [  1634698800000 , 0.0931533  ],
+     [  1634785200000 , 0.0936539  ],
+     [  1634871600000 , 0.0938517  ],
+     [  1635130800000 , 0.0929585  ],
+     [  1635217200000 , 0.0938517  ],
+     [  1635303600000 , 0.0944301  ],
+     [  1635390000000 , 0.0930655  ],
+     [  1635476400000 , 0.0918543  ],
+     [  1635735600000 , 0.091968  ],
+     [  1635908400000 , 0.0938661  ],
+     [  1635994800000 , 0.0957309  ],
+     [  1636081200000 , 0.0955872  ],
+     [  1636340400000 , 0.0958132  ],
+     [  1636426800000 , 0.0957206  ],
+     [  1636513200000 , 0.0971921  ],
+     [  1636599600000 , 0.0976392  ],
+     [  1636686000000 , 0.096383  ],
+     [  1637031600000 , 0.0996363  ],
+     [  1637118000000 , 0.0981337  ],
+     [  1637204400000 , 0.0974258  ],
+     [  1637290800000 , 0.0974258  ],
+     [  1637550000000 , 0.0964351  ],
+     [  1637636400000 , 0.0976927  ],
+     [  1637722800000 , 0.0977677  ],
+     [  1637809200000 , 0.0983177  ],
+     [  1637895600000 , 0.098296  ],
+     [  1638154800000 , 0.0975111  ],
+     [  1638241200000 , 0.0969296  ],
+     [  1638327600000 , 0.0991658  ],
+     [  1638414000000 , 0.0974685  ],
+     [  1638500400000 , 0.0974898  ],
+     [  1638759600000 , 0.0974579  ],
+     [  1638846000000 , 0.0963447  ],
+     [  1638932400000 , 0.0977349  ],
+     [  1639018800000 , 0.0977456  ],
+     [  1639105200000 , 0.0965424  ],
+     [  1639364400000 , 0.0963447  ],
+     [  1639450800000 , 0.0968351  ],
+     [  1639537200000 , 0.0967827  ],
+     [  1639623600000 , 0.096459  ],
+     [  1639710000000 , 0.0965424  ],
+     [  1639969200000 , 0.0965424  ],
+     [  1640055600000 , 0.0968981  ],
+     [  1640142000000 , 0.0964278  ],
+     [  1640228400000 , 0.0964903  ],
+     [  1640574000000 , 0.0973518  ],
+     [  1640660400000 , 0.0962721  ],
+     [  1640746800000 , 0.0952465  ],
+     [  1640833200000 , 0.0937061  ],
+     [  1641178800000 , 0.0941785  ],
+     [  1641265200000 , 0.0964163  ],
+     [  1641351600000 , 0.0982652  ],
+     [  1641438000000 , 0.0972317  ],
+     [  1641524400000 , 0.0982759  ],
+     [  1641783600000 , 0.0974748  ],
+     [  1641870000000 , 0.0975915  ],
+     [  1641956400000 , 0.0957063  ],
+     [  1642042800000 , 0.0976978  ],
+     [  1642129200000 , 0.0973901  ],
+     [  1642388400000 , 0.095829  ],
+     [  1642474800000 , 0.0960137  ],
+     [  1642561200000 , 0.0952185  ],
+     [  1642647600000 , 0.0962094  ],
+     [  1642734000000 , 0.0961681  ],
+     [  1642993200000 , 0.0963438  ],
+     [  1643079600000 , 0.0960651  ],
+     [  1643166000000 , 0.095911  ],
+     [  1643252400000 , 0.0972739  ],
+     [  1643338800000 , 0.0976871  ],
+     [  1643598000000 , 0.0993337  ],
+     [  1643684400000 , 0.0989424  ],
+     [  1643770800000 , 0.100549  ],
+     [  1643857200000 , 0.10046  ],
+     [  1643943600000 , 0.100471  ],
+     [  1644202800000 , 0.100482  ],
+     [  1644289200000 , 0.102405  ],
+     [  1644375600000 , 0.101909  ],
+     [  1644462000000 , 0.101111  ],
+     [  1644548400000 , 0.100237  ],
+     [  1644807600000 , 0.10046  ],
+     [  1644894000000 , 0.100527  ],
+     [  1644980400000 , 0.10046  ],
+     [  1645066800000 , 0.100226  ],
+     [  1645153200000 , 0.100159  ],
+     [  1645412400000 , 0.100248  ],
+     [  1645498800000 , 0.100337  ],
+     [  1645585200000 , 0.0993556  ],
+     [  1645671600000 , 0.0993883  ],
+     [  1645758000000 , 0.100528  ],
+     [  1646190000000 , 0.0998345  ],
+     [  1646276400000 , 0.099944  ],
+     [  1646362800000 , 0.0987743  ],
+     [  1646622000000 , 0.0997799  ],
+     [  1646708400000 , 0.0997799  ],
+     [  1646794800000 , 0.0995836  ],
+     [  1646881200000 , 0.0999659  ],
+     [  1646967600000 , 0.0994424  ],
+     [  1647226800000 , 0.09886  ],
+     [  1647313200000 , 0.0988493  ],
+     [  1647399600000 , 0.0984755  ],
+     [  1647486000000 , 0.0975376  ],
+     [  1647572400000 , 0.0993882  ],
+     [  1647831600000 , 0.0981045  ],
+     [  1647918000000 , 0.0987529  ],
+     [  1648004400000 , 0.0983904  ],
+     [  1648090800000 , 0.0984861  ],
+     [  1648177200000 , 0.0974855  ],
+     [  1648436400000 , 0.0973605  ],
+     [  1648522800000 , 0.0949567  ],
+     [  1648609200000 , 0.0951748  ],
+     [  1648695600000 , 0.0968644  ],
+     [  1648782000000 , 0.0977924  ],
+     [  1649041200000 , 0.0974707  ],
+     [  1649127600000 , 0.0952279  ],
+     [  1649214000000 , 0.0957141  ],
+     [  1649300400000 , 0.0962354  ],
+     [  1649386800000 , 0.0957041  ],
+     [  1649646000000 , 0.0947175  ],
+     [  1649732400000 , 0.0962354  ],
+     [  1649818800000 , 0.0972129  ],
+     [  1649905200000 , 0.0992181  ],
+     [  1650250800000 , 0.0995405  ],
+     [  1650337200000 , 0.0987913  ],
+     [  1650423600000 , 0.0990897  ],
+     [  1650596400000 , 0.0991003  ],
+     [  1650855600000 , 0.0986111  ],
+     [  1650942000000 , 0.102597  ],
+     [  1651028400000 , 0.101532  ],
+     [  1651114800000 , 0.101487  ],
+     [  1651201200000 , 0.0991251  ],
+     [  1651460400000 , 0.0905677  ],
+     [  1651546800000 , 0.0905873  ],
+     [  1651633200000 , 0.0911599  ],
+     [  1651719600000 , 0.0921036  ],
+     [  1651806000000 , 0.0909122  ],
+     [  1652065200000 , 0.0919214  ],
+     [  1652151600000 , 0.0924599  ],
+     [  1652238000000 , 0.0969618  ],
+     [  1652324400000 , 0.0937344  ],
+     [  1652410800000 , 0.0929325  ],
+     [  1652670000000 , 0.0921441  ],
+     [  1652756400000 , 0.09364  ],
+     [  1652842800000 , 0.0930462  ],
+     [  1652929200000 , 0.0929531  ],
+     [  1653015600000 , 0.0933474  ],
+     [  1653274800000 , 0.0924701  ],
+     [  1653361200000 , 0.0923782  ],
+     [  1653447600000 , 0.0921137  ],
+     [  1653534000000 , 0.10202  ],
+     [  1653620400000 , 0.10228  ],
+     [  1653879600000 , 0.102608  ],
+     [  1653966000000 , 0.101341  ],
+     [  1654052400000 , 0.102577  ],
+     [  1654138800000 , 0.104296  ],
+     [  1654225200000 , 0.103763  ],
+     [  1654484400000 , 0.103775  ],
+     [  1654570800000 , 0.104425  ],
+     [  1654657200000 , 0.104577  ],
+     [  1654743600000 , 0.10432  ],
+     [  1654830000000 , 0.104296  ],
+     [  1655089200000 , 0.104765  ],
+     [  1655175600000 , 0.103315  ],
+     [  1655262000000 , 0.103487  ],
+     [  1655434800000 , 0.103729  ],
+     [  1655694000000 , 0.102713  ],
+     [  1655780400000 , 0.103832  ],
+     [  1655866800000 , 0.103832  ],
+     [  1655953200000 , 0.103948  ],
+     [  1656039600000 , 0.103729  ],
+     [  1656298800000 , 0.103636  ],
+     [  1656385200000 , 0.104192  ],
+     [  1656471600000 , 0.103729  ],
+     [  1656558000000 , 0.105543  ],
+     [  1656644400000 , 0.105555  ],
+     [  1656903600000 , 0.106222  ],
+     [  1656990000000 , 0.107154  ],
+     [  1657076400000 , 0.107081  ],
+     [  1657162800000 , 0.10691  ],
+     [  1657249200000 , 0.105971  ],
+     [  1657508400000 , 0.106306  ],
+     [  1657594800000 , 0.105745  ],
+     [  1657681200000 , 0.105733  ],
+     [  1657767600000 , 0.105959  ],
+     [  1657854000000 , 0.104558  ],
+     [  1658113200000 , 0.104954  ],
+     [  1658199600000 , 0.104721  ],
+     [  1658286000000 , 0.104558  ],
+     [  1658372400000 , 0.104604  ],
+     [  1658458800000 , 0.104849  ],
+     [  1658718000000 , 0.105449  ],
+     [  1658804400000 , 0.105709  ],
+     [  1658890800000 , 0.105709  ],
+     [  1658977200000 , 0.105745  ],
+     [  1659063600000 , 0.10565  ],
+     [  1659322800000 , 0.0982093  ],
+     [  1659409200000 , 0.099313  ],
+     [  1659495600000 , 0.0996444  ],
+     [  1659582000000 , 0.0993814  ],
+     [  1659668400000 , 0.0995413  ],
+     [  1659927600000 , 0.0987355  ],
+     [  1660014000000 , 0.0984325  ],
+     [  1660100400000 , 0.0984102  ],
+     [  1660186800000 , 0.0980869  ],
+     [  1660273200000 , 0.106649  ],
+     [  1660532400000 , 0.104188  ],
+     [  1660618800000 , 0.105147  ],
+     [  1660705200000 , 0.105007  ],
+     [  1660791600000 , 0.104926  ],
+     [  1660878000000 , 0.105346  ],
+     [  1661137200000 , 0.104188  ],
+     [  1661223600000 , 0.104383  ],
+     [  1661310000000 , 0.104764  ],
+     [  1661396400000 , 0.103393  ],
+     [  1661482800000 , 0.10162  ],
+     [  1661742000000 , 0.100702  ],
+     [  1661828400000 , 0.0993305  ],
+     [  1661914800000 , 0.0989392  ],
+     [  1662001200000 , 0.0901896  ],
+     [  1662087600000 , 0.101133  ],
+     [  1662346800000 , 0.100802  ],
+     [  1662433200000 , 0.100972  ],
+     [  1662606000000 , 0.100495  ],
+     [  1662692400000 , 0.100622  ],
+     [  1662951600000 , 0.100675  ],
+     [  1663038000000 , 0.101122  ],
+     [  1663124400000 , 0.100728  ],
+     [  1663210800000 , 0.10059  ],
+     [  1663297200000 , 0.100315  ],
+     [  1663556400000 , 0.0997394  ],
+     [  1663642800000 , 0.100105  ],
+     [  1663729200000 , 0.100919  ],
+     [  1663815600000 , 0.100315  ],
+     [  1663902000000 , 0.0994384  ],
+     [  1664161200000 , 0.0990262  ],
+     [  1664247600000 , 0.0985767  ],
+     [  1664334000000 , 0.0991289  ],
+     [  1664420400000 , 0.0995316  ],
+     [  1664506800000 , 0.0992359  ],
+     [  1664766000000 , 0.0905922  ],
+     [  1664852400000 , 0.0891131  ],
+     [  1664938800000 , 0.0904702  ],
+     [  1665025200000 , 0.0909696  ],
+     [  1665111600000 , 0.0909696  ],
+     [  1665370800000 , 0.0907805  ],
+     [  1665457200000 , 0.0891131  ],
+     [  1665630000000 , 0.0982779  ],
+     [  1665716400000 , 0.097978  ],
+     [  1665975600000 , 0.0974033  ],
+     [  1666062000000 , 0.0963124  ],
+     [  1666148400000 , 0.0963124  ],
+     [  1666234800000 , 0.0963895  ],
+     [  1666321200000 , 0.0963124  ],
+     [  1666580400000 , 0.0959286  ],
+     [  1666666800000 , 0.0935889  ],
+     [  1666753200000 , 0.0938808  ],
+     [  1666839600000 , 0.0967769  ],
+     [  1666926000000 , 0.0972655  ],
+     [  1667185200000 , 0.0970371  ],
+     [  1667271600000 , 0.0994858  ],
+     [  1667444400000 , 0.0993942  ],
+     [  1667530800000 , 0.0995879  ],
+     [  1667790000000 , 0.100298  ],
+     [  1667876400000 , 0.0988277  ],
+     [  1667962800000 , 0.0973025  ],
+     [  1668049200000 , 0.101887  ],
+     [  1668135600000 , 0.102511  ],
+     [  1668394800000 , 0.102945  ],
+     [  1668567600000 , 0.103993  ],
+     [  1668654000000 , 0.107875  ],
+     [  1668740400000 , 0.107875  ],
+     [  1668999600000 , 0.107731  ],
+     [  1669086000000 , 0.111275  ],
+     [  1669172400000 , 0.1076  ],
+     [  1669258800000 , 0.110326  ],
+     [  1669345200000 , 0.109952  ],
+     [  1669604400000 , 0.109777  ],
+     [  1669690800000 , 0.10683  ],
+     [  1669777200000 , 0.101156  ],
+     [  1669863600000 , 0.104115  ],
+     [  1669950000000 , 0.103346  ],
+     [  1670209200000 , 0.102944  ],
+     [  1670295600000 , 0.101524  ],
+     [  1670382000000 , 0.104126  ],
+     [  1670468400000 , 0.103949  ],
+     [  1670554800000 , 0.10217  ],
+     [  1670814000000 , 0.104126  ],
+     [  1670900400000 , 0.103961  ],
+     [  1670986800000 , 0.103041  ],
+     [  1671073200000 , 0.10303  ],
+     [  1671159600000 , 0.102598  ],
+     [  1671418800000 , 0.10303  ],
+     [  1671505200000 , 0.10303  ],
+     [  1671591600000 , 0.10303  ],
+     [  1671678000000 , 0.105246  ],
+     [  1671764400000 , 0.107441  ],
+     [  1672023600000 , 0.107323  ],
+     [  1672110000000 , 0.106378  ],
+     [  1672196400000 , 0.107559  ],
+     [  1672282800000 , 0.104681  ],
+     [  1672628400000 , 0.104781  ],
+     [  1672714800000 , 0.10552  ],
+     [  1672801200000 , 0.105082  ],
+     [  1672887600000 , 0.105049  ],
+     [  1672974000000 , 0.104781  ],
+     [  1673233200000 , 0.104982  ],
+     [  1673319600000 , 0.105419  ],
+     [  1673406000000 , 0.105532  ],
+     [  1673492400000 , 0.105532  ],
+     [  1673578800000 , 0.105284  ],
+     [  1673838000000 , 0.105498  ],
+     [  1673924400000 , 0.10552  ],
+     [  1674010800000 , 0.105318  ],
+     [  1674097200000 , 0.104948  ],
+     [  1674183600000 , 0.105509  ],
+     [  1674442800000 , 0.107194  ],
+     [  1674529200000 , 0.106788  ],
+     [  1674615600000 , 0.107968  ],
+     [  1674702000000 , 0.105758  ],
+     [  1674788400000 , 0.103876  ],
+     [  1675047600000 , 0.105769  ],
+     [  1675134000000 , 0.106097  ],
+     [  1675220400000 , 0.108909  ],
+     [  1675306800000 , 0.110437  ],
+     [  1675393200000 , 0.11018  ],
+     [  1675652400000 , 0.111081  ],
+     [  1675738800000 , 0.111668  ],
+     [  1675825200000 , 0.111794  ],
+     [  1675911600000 , 0.11018  ],
+     [  1675998000000 , 0.11018  ],
+     [  1676257200000 , 0.112569  ],
+     [  1676343600000 , 0.112543  ],
+     [  1676430000000 , 0.112479  ],
+     [  1676516400000 , 0.112812  ],
+     [  1676602800000 , 0.111832  ],
+     [  1677034800000 , 0.112696  ],
+     [  1677121200000 , 0.113392  ],
+     [  1677207600000 , 0.11285  ],
+     [  1677466800000 , 0.113043  ],
+     [  1677553200000 , 0.112552  ],
+     [  1677639600000 , 0.114547  ],
+     [  1677726000000 , 0.115076  ],
+     [  1677812400000 , 0.11047  ],
+     [  1678071600000 , 0.112086  ],
+     [  1678158000000 , 0.110925  ],
+     [  1678244400000 , 0.112111  ],
+     [  1678330800000 , 0.112212  ],
+     [  1678417200000 , 0.111334  ],
+     [  1678676400000 , 0.111161  ],
+     [  1678762800000 , 0.111359  ],
+     [  1678849200000 , 0.111621  ],
+     [  1678935600000 , 0.112529  ],
+     [  1679022000000 , 0.114784  ],
+     [  1679281200000 , 0.115329  ],
+     [  1679367600000 , 0.11493  ],
+     [  1679454000000 , 0.115196  ],
+     [  1679540400000 , 0.115758  ],
+     [  1679626800000 , 0.114573  ],
+     [  1679886000000 , 0.110962  ],
+     [  1679972400000 , 0.110104  ],
+     [  1680058800000 , 0.108984  ],
+     [  1680145200000 , 0.109559  ],
+     [  1680231600000 , 0.112357  ],
+     [  1680490800000 , 0.114008  ],
+     [  1680577200000 , 0.113285  ],
+     [  1680663600000 , 0.113775  ],
+     [  1680750000000 , 0.115069  ],
+     [  1681095600000 , 0.114425  ],
+     [  1681182000000 , 0.114884  ],
+     [  1681268400000 , 0.111061  ],
+     [  1681354800000 , 0.110901  ],
+     [  1681441200000 , 0.110963  ],
+     [  1681700400000 , 0.109662  ],
+     [  1681786800000 , 0.109975  ],
+     [  1681873200000 , 0.108852  ],
+     [  1681959600000 , 0.107681  ],
+     [  1682305200000 , 0.110024  ],
+     [  1682391600000 , 0.109101  ],
+     [  1682478000000 , 0.109819  ],
+     [  1682564400000 , 0.10871  ],
+     [  1682650800000 , 0.107667  ],
+     [  1682996400000 , 0.0984787  ],
+     [  1683082800000 , 0.108899  ],
+     [  1683169200000 , 0.109017  ],
+     [  1683255600000 , 0.110344  ],
+     [  1683514800000 , 0.107883  ],
+     [  1683601200000 , 0.109017  ],
+     [  1683687600000 , 0.109372  ],
+     [  1683774000000 , 0.106321  ],
+     [  1683860400000 , 0.109718  ],
+     [  1684119600000 , 0.10786  ],
+     [  1684206000000 , 0.109076  ],
+     [  1684292400000 , 0.108547  ],
+     [  1684378800000 , 0.108781  ],
+     [  1684465200000 , 0.108547  ],
+     [  1684724400000 , 0.108805  ],
+     [  1684810800000 , 0.108535  ],
+     [  1684897200000 , 0.109194  ],
+     [  1684983600000 , 0.109491  ],
+     [  1685070000000 , 0.109647  ],
+     [  1685329200000 , 0.10997  ],
+     [  1685415600000 , 0.110163  ],
+     [  1685502000000 , 0.110554  ],
+     [  1685588400000 , 0.111116  ],
+     [  1685674800000 , 0.108575  ],
+     [  1685934000000 , 0.109114  ],
+     [  1686020400000 , 0.109789  ],
+     [  1686106800000 , 0.109433  ],
+     [  1686279600000 , 0.109456  ],
+     [  1686538800000 , 0.10973  ],
+     [  1686625200000 , 0.109825  ],
+     [  1686711600000 , 0.109516  ],
+     [  1686798000000 , 0.109078  ],
+     [  1686884400000 , 0.108727  ],
+     [  1687143600000 , 0.108273  ],
+     [  1687230000000 , 0.107857  ],
+     [  1687316400000 , 0.107399  ],
+     [  1687402800000 , 0.10319  ],
+     [  1687489200000 , 0.104351  ],
+     [  1687748400000 , 0.104957  ],
+     [  1687834800000 , 0.103179  ],
+     [  1687921200000 , 0.103762  ],
+     [  1688007600000 , 0.10373  ],
+     [  1688094000000 , 0.10114  ],
+     [  1688353200000 , 0.106811  ],
+     [  1688439600000 , 0.107751  ],
+     [  1688526000000 , 0.106419  ],
+     [  1688612400000 , 0.104204  ],
+     [  1688698800000 , 0.105404  ],
+     [  1688958000000 , 0.0997872  ],
+     [  1689044400000 , 0.100702  ],
+     [  1689130800000 , 0.0999419  ],
+     [  1689217200000 , 0.0992852  ],
+     [  1689303600000 , 0.0976705  ],
+     [  1689562800000 , 0.0974245  ],
+     [  1689649200000 , 0.0976804  ],
+     [  1689735600000 , 0.0977792  ],
+     [  1689822000000 , 0.0988791  ],
+     [  1689908400000 , 0.0996844  ],
+     [  1690167600000 , 0.0979079  ],
+     [  1690254000000 , 0.098869  ],
+     [  1690340400000 , 0.0989701  ],
+     [  1690426800000 , 0.0973951  ],
+     [  1690513200000 , 0.0971309  ],
+     [  1690772400000 , 0.0969811  ],
+     [  1690858800000 , 0.0986711  ],
+     [  1690945200000 , 0.0992251  ],
+     [  1691031600000 , 0.0996014  ],
+     [  1691118000000 , 0.0991745  ],
+     [  1691377200000 , 0.0984113  ],
+     [  1691463600000 , 0.0991745  ],
+     [  1691550000000 , 0.099479  ],
+     [  1691636400000 , 0.0990532  ],
+     [  1691722800000 , 0.0986911  ],
+     [  1691982000000 , 0.0989221  ],
+     [  1692068400000 , 0.10123  ],
+     [  1692154800000 , 0.100664  ],
+     [  1692241200000 , 0.100207  ],
+     [  1692327600000 , 0.101664  ],
+     [  1692586800000 , 0.101749  ],
+     [  1692673200000 , 0.102081  ],
+     [  1692759600000 , 0.101198  ],
+     [  1692846000000 , 0.101974  ],
+     [  1692932400000 , 0.101399  ],
+     [  1693191600000 , 0.0982323  ],
+     [  1693278000000 , 0.0988718  ],
+     [  1693364400000 , 0.0986811  ],
+     [  1693450800000 , 0.0981761  ],
+     [  1693537200000 , 0.100433  ],
+     [  1693796400000 , 0.101109  ],
+     [  1693882800000 , 0.102359  ],
+     [  1693969200000 , 0.102877  ],
+     [  1694142000000 , 0.101656  ],
+     [  1694401200000 , 0.102166  ],
+     [  1694487600000 , 0.102812  ],
+     [  1694574000000 , 0.102833  ],
+     [  1694660400000 , 0.102812  ],
+     [  1694746800000 , 0.10292  ],
+     [  1695006000000 , 0.103246  ],
+     [  1695092400000 , 0.0990076  ],
+     [  1695178800000 , 0.102028  ],
+     [  1695265200000 , 0.102596  ],
+     [  1695351600000 , 0.103007  ],
+     [  1695610800000 , 0.101857  ],
+     [  1695697200000 , 0.101224  ],
+     [  1695783600000 , 0.101709  ],
+     [  1695870000000 , 0.100702  ],
+     [  1695956400000 , 0.0996647  ],
+     [  1696215600000 , 0.101392  ],
+     [  1696302000000 , 0.102035  ],
+     [  1696388400000 , 0.101476  ],
+     [  1696474800000 , 0.101172  ],
+     [  1696561200000 , 0.10157  ],
+     [  1696820400000 , 0.100406  ],
+     [  1696906800000 , 0.100664  ],
+     [  1696993200000 , 0.101183  ],
+     [  1697166000000 , 0.102482  ],
+     [  1697425200000 , 0.101623  ],
+     [  1697511600000 , 0.101823  ],
+     [  1697598000000 , 0.102547  ],
+     [  1697684400000 , 0.101444  ],
+     [  1697770800000 , 0.102718  ],
+     [  1698030000000 , 0.102826  ],
+     [  1698116400000 , 0.102493  ],
+     [  1698202800000 , 0.102226  ],
+     [  1698289200000 , 0.102269  ],
+     [  1698375600000 , 0.102237  ],
+     [  1698634800000 , 0.103739  ],
+     [  1698721200000 , 0.101909  ],
+     [  1698807600000 , 0.103308  ],
+     [  1698980400000 , 0.102706  ],
+     [  1699239600000 , 0.10346  ],
+     [  1699326000000 , 0.102738  ],
+     [  1699412400000 , 0.103146  ],
+     [  1699498800000 , 0.102386  ],
+     [  1699585200000 , 0.101962  ],
+     [  1699844400000 , 0.102078  ],
+     [  1699930800000 , 0.101668  ],
+     [  1700103600000 , 0.101668  ],
+     [  1700190000000 , 0.101741  ],
+     [  1700449200000 , 0.101773  ],
+     [  1700535600000 , 0.101857  ],
+     [  1700622000000 , 0.101846  ],
+     [  1700708400000 , 0.102279  ],
+     [  1700794800000 , 0.102823  ],
+     [  1701054000000 , 0.103918  ],
+     [  1701140400000 , 0.103525  ],
+     [  1701226800000 , 0.103114  ],
+     [  1701313200000 , 0.103028  ],
+     [  1701399600000 , 0.104047  ],
+     [  1701658800000 , 0.104069  ],
+     [  1701745200000 , 0.103982  ],
+     [  1701831600000 , 0.104047  ],
+     [  1701918000000 , 0.104376  ],
+     [  1702004400000 , 0.103873  ],
+     [  1702263600000 , 0.104266  ],
+     [  1702350000000 , 0.105376  ],
+     [  1702436400000 , 0.104652  ],
+     [  1702522800000 , 0.103949  ],
+     [  1702609200000 , 0.104508  ],
+     [  1702868400000 , 0.10463  ],
+     [  1702954800000 , 0.104069  ],
+     [  1703041200000 , 0.103851  ],
+     [  1703127600000 , 0.103202  ],
+     [  1703214000000 , 0.103721  ],
+     [  1703559600000 , 0.103245  ],
+     [  1703646000000 , 0.102423  ],
+     [  1703732400000 , 0.100052  ],
+     [  1704164400000 , 0.10382  ],
+     [  1704250800000 , 0.104233  ],
+     [  1704337200000 , 0.104726  ],
+     [  1704423600000 , 0.104649  ],
+     [  1704682800000 , 0.104484  ],
+     [  1704769200000 , 0.104375  ],
+     [  1704855600000 , 0.104495  ],
+     [  1704942000000 , 0.105625  ],
+     [  1705028400000 , 0.105301  ],
+     [  1705287600000 , 0.103432  ],
+     [  1705374000000 , 0.104037  ],
+     [  1705460400000 , 0.104167  ],
+     [  1705546800000 , 0.104331  ],
+     [  1705633200000 , 0.1042  ],
+     [  1705892400000 , 0.104058  ],
+     [  1705978800000 , 0.104375  ],
+     [  1706065200000 , 0.103972  ],
+     [  1706151600000 , 0.102823  ],
+     [  1706238000000 , 0.103239  ],
+     [  1706497200000 , 0.103453  ],
+     [  1706583600000 , 0.103453  ],
+     [  1706670000000 , 0.103258  ],
+     [  1706756400000 , 0.0945194  ],
+     [  1706842800000 , 0.095563  ],
+     [  1707102000000 , 0.106594  ],
+     [  1707188400000 , 0.105693  ],
+     [  1707274800000 , 0.105459  ],
+     [  1707361200000 , 0.105359  ],
+     [  1707447600000 , 0.105371  ],
+     [  1707879600000 , 0.105337  ],
+     [  1707966000000 , 0.10411  ],
+     [  1708052400000 , 0.104786  ],
+     [  1708311600000 , 0.104284  ],
+     [  1708398000000 , 0.103905  ],
+     [  1708484400000 , 0.104371  ],
+     [  1708570800000 , 0.104951  ],
+     [  1708657200000 , 0.104403  ],
+     [  1708916400000 , 0.103187  ],
+     [  1709002800000 , 0.103518  ],
+     [  1709089200000 , 0.10339  ],
+     [  1709175600000 , 0.103631  ],
+     [  1709262000000 , 0.105722  ],
+     [  1709521200000 , 0.10495  ],
+     [  1709607600000 , 0.104807  ],
+     [  1709694000000 , 0.104232  ],
+     [  1709780400000 , 0.104416  ],
+     [  1709866800000 , 0.104426  ],
+     [  1710126000000 , 0.103951  ],
+     [  1710212400000 , 0.103865  ],
+     [  1710298800000 , 0.103951  ],
+     [  1710385200000 , 0.104027  ],
+     [  1710471600000 , 0.103758  ],
+     [  1710730800000 , 0.103641  ],
+     [  1710817200000 , 0.103289  ],
+     [  1710903600000 , 0.103321  ],
+     [  1710990000000 , 0.103566  ],
+     [  1711076400000 , 0.103651  ],
+     [  1711335600000 , 0.103555  ],
+     [  1711422000000 , 0.102698  ],
+     [  1711508400000 , 0.10293  ],
+     [  1711594800000 , 0.103368  ],
+     [  1711940400000 , 0.103305  ],
+     [  1712026800000 , 0.104297  ],
+     [  1712113200000 , 0.104125  ],
+     [  1712199600000 , 0.103591  ],
+     [  1712286000000 , 0.103761  ],
+     [  1712545200000 , 0.103263  ],
+     [  1712631600000 , 0.103273  ],
+     [  1712718000000 , 0.103379  ],
+     [  1712804400000 , 0.102894  ],
+     [  1712890800000 , 0.102811  ],
+     [  1713150000000 , 0.103273  ],
+     [  1713236400000 , 0.103199  ],
+     [  1713322800000 , 0.103252  ],
+     [  1713409200000 , 0.10358  ],
+     [  1713495600000 , 0.103612  ],
+     [  1713754800000 , 0.103591  ],
+     [  1713841200000 , 0.103815  ],
+     [  1713927600000 , 0.104426  ],
+     [  1714014000000 , 0.104719  ],
+     [  1714100400000 , 0.104211  ],
+     [  1714359600000 , 0.103591  ],
+     [  1714446000000 , 0.104249  ],
+     [  1714618800000 , 0.106634  ],
+     [  1714705200000 , 0.106701  ],
+     [  1714964400000 , 0.105943  ],
+     [  1715050800000 , 0.105799  ],
+     [  1715137200000 , 0.105777  ],
+     [  1715223600000 , 0.106354  ],
+     [  1715310000000 , 0.106109  ],
+     [  1715569200000 , 0.106287  ],
+     [  1715655600000 , 0.106488  ],
+     [  1715742000000 , 0.105722  ],
+     [  1715828400000 , 0.105689  ],
+     [  1715914800000 , 0.10512  ],
+     [  1716174000000 , 0.105207  ],
+     [  1716260400000 , 0.10512  ],
+     [  1716346800000 , 0.105426  ],
+     [  1716433200000 , 0.105338  ],
+     [  1716519600000 , 0.10512  ],
+     [  1716778800000 , 0.105152  ],
+     [  1716865200000 , 0.105404  ],
+     [  1716951600000 , 0.105601  ],
+     [  1717124400000 , 0.105171  ],
+     [  1717383600000 , 0.107214  ],
+     [  1717470000000 , 0.107214  ],
+     [  1717556400000 , 0.107225  ],
+     [  1717642800000 , 0.10691  ],
+     [  1717729200000 , 0.106865  ],
+     [  1717988400000 , 0.107236  ],
+     [  1718074800000 , 0.10718  ],
+     [  1718161200000 , 0.107225  ],
+     [  1718247600000 , 0.107124  ],
+     [  1718334000000 , 0.10691  ],
+     [  1718593200000 , 0.106899  ],
+     [  1718679600000 , 0.107203  ],
+     [  1718766000000 , 0.10718  ],
+     [  1718852400000 , 0.107169  ],
+     [  1718938800000 , 0.107146  ],
+     [  1719198000000 , 0.10832  ],
+     [  1719284400000 , 0.108113  ],
+     [  1719370800000 , 0.108377  ],
+     [  1719457200000 , 0.108643  ],
+     [  1719543600000 , 0.108711  ],
+     [  1719802800000 , 0.10905  ],
+     [  1719889200000 , 0.110012  ],
+     [  1719975600000 , 0.11  ],
+     [  1720062000000 , 0.11  ],
+     [  1720148400000 , 0.110308  ],
+     [  1720407600000 , 0.109376  ],
+     [  1720494000000 , 0.109811  ],
+     [  1720580400000 , 0.109752  ],
+     [  1720666800000 , 0.109858  ],
+     [  1720753200000 , 0.108887  ],
+     [  1721012400000 , 0.107865  ],
+     [  1721098800000 , 0.107559  ],
+     [  1721185200000 , 0.107672  ],
+     [  1721271600000 , 0.10739  ],
+     [  1721358000000 , 0.107446  ],
+     [  1721617200000 , 0.107424  ],
+     [  1721703600000 , 0.106451  ],
+     [  1721790000000 , 0.10674  ],
+     [  1721876400000 , 0.107109  ],
+     [  1721962800000 , 0.106807  ],
+     [  1722222000000 , 0.106762  ],
+     [  1722308400000 , 0.106706  ],
+     [  1722394800000 , 0.106816  ],
+     [  1722481200000 , 0.10731  ],
+     [  1722567600000 , 0.107908  ],
+     [  1722826800000 , 0.107999  ],
+     [  1722913200000 , 0.108135  ],
+     [  1722999600000 , 0.108135  ],
+     [  1723086000000 , 0.108352  ],
+     [  1723172400000 , 0.10767  ],
+     [  1723431600000 , 0.107795  ],
+     [  1723518000000 , 0.107749  ],
+     [  1723604400000 , 0.108135  ],
+     [  1723690800000 , 0.107715  ],
+     [  1723777200000 , 0.107288  ],
+     [  1724036400000 , 0.106565  ],
+     [  1724122800000 , 0.106576  ],
+     [  1724209200000 , 0.105851  ],
+     [  1724295600000 , 0.106223  ],
+     [  1724382000000 , 0.106179  ],
+     [  1724641200000 , 0.106245  ],
+     [  1724727600000 , 0.106498  ],
+     [  1724814000000 , 0.107243  ],
+     [  1724900400000 , 0.106808  ],
+     [  1724986800000 , 0.108156  ],
+     [  1725246000000 , 0.109154  ],
+     [  1725332400000 , 0.108785  ],
+     [  1725418800000 , 0.10882  ],
+     [  1725505200000 , 0.108602  ],
+     [  1725591600000 , 0.108283  ],
+     [  1725850800000 , 0.108591  ],
+     [  1725937200000 , 0.109004  ],
+     [  1726023600000 , 0.109723  ],
+     [  1726110000000 , 0.109455  ],
+     [  1726196400000 , 0.109362  ],
+     [  1726455600000 , 0.109734  ],
+     [  1726542000000 , 0.109177  ],
+     [  1726628400000 , 0.11005  ],
+     [  1726714800000 , 0.110215  ],
+     [  1726801200000 , 0.109235  ],
+     [  1727060400000 , 0.109746  ],
+     [  1727146800000 , 0.109793  ],
+     [  1727233200000 , 0.109758  ],
+     [  1727319600000 , 0.109525  ],
+     [  1727406000000 , 0.109281  ],
+     [  1727665200000 , 0.109682  ],
+     [  1727751600000 , 0.100826  ],
+     [  1727838000000 , 0.101248  ],
+     [  1727924400000 , 0.102691  ],
+     [  1728010800000 , 0.10305  ],
+     [  1728270000000 , 0.103844  ],
+     [  1728356400000 , 0.103707  ],
+     [  1728442800000 , 0.103707  ],
+     [  1728529200000 , 0.103707  ],
+     [  1728615600000 , 0.10258  ],
+     [  1728874800000 , 0.10258  ],
+     [  1728961200000 , 0.102546  ],
+     [  1729047600000 , 0.101992  ],
+     [  1729134000000 , 0.10218  ],
+     [  1729220400000 , 0.111715  ],
+     [  1729479600000 , 0.114405  ],
+     [  1729566000000 , 0.112724  ],
+     [  1729652400000 , 0.113689  ],
+     [  1729738800000 , 0.112736  ],
+     [  1729825200000 , 0.114392  ],
+     [  1730084400000 , 0.113204  ],
+     [  1730170800000 , 0.11265  ],
+     [  1730257200000 , 0.11297  ],
+     [  1730343600000 , 0.112526  ],
+     [  1730430000000 , 0.114258  ],
+     [  1730689200000 , 0.114484  ],
+     [  1730775600000 , 0.114572  ],
+     [  1730862000000 , 0.115476  ],
+     [  1730948400000 , 0.115399  ],
+     [  1731034800000 , 0.114572  ],
+     [  1731294000000 , 0.115643  ],
+     [  1731380400000 , 0.116316  ],
+     [  1731466800000 , 0.116043  ],
+     [  1731553200000 , 0.116082  ],
+     [  1731898800000 , 0.116917  ],
+     [  1731985200000 , 0.116043  ],
+     [  1732158000000 , 0.115553  ],
+     [  1732244400000 , 0.120916  ],
+     [  1732503600000 , 0.121668  ],
+     [  1732590000000 , 0.122456  ],
+     [  1732676400000 , 0.121277  ],
+     [  1732762800000 , 0.122006  ],
+     [  1732849200000 , 0.121451  ],
+     [  1733108400000 , 0.112438  ],
+     [  1733194800000 , 0.125003  ],
+     [  1733281200000 , 0.125789  ],
+     [  1733367600000 , 0.138532  ],
+     [  1733454000000 , 0.136168  ],
+     [  1733713200000 , 0.137494  ],
+     [  1733799600000 , 0.138463  ],
+     [  1733886000000 , 0.13659  ],
+     [  1733972400000 , 0.137152  ],
+     [  1734058800000 , 0.135247  ],
+     [  1734318000000 , 0.133331  ],
+     [  1734404400000 , 0.132784  ],
+     [  1734490800000 , 0.133784  ],
+     [  1734577200000 , 0.132832  ],
+     [  1734663600000 , 0.13288  ],
+     [  1734922800000 , 0.131358  ],
+     [  1735182000000 , 0.129048  ],
+     [  1735268400000 , 0.125245  ],
+     [  1735527600000 , 0.126529  ],
+     [  1735786800000 , 0.129522  ],
+     [  1735873200000 , 0.129461  ],
+     [  1736132400000 , 0.129507  ],
+     [  1736218800000 , 0.12972  ],
+     [  1736305200000 , 0.13109  ],
+     [  1736391600000 , 0.130209  ],
+     [  1736478000000 , 0.130286  ],
+     [  1736737200000 , 0.128124  ],
+     [  1736823600000 , 0.12978  ],
+     [  1736910000000 , 0.128692  ],
+     [  1736996400000 , 0.129933  ],
+     [  1737082800000 , 0.130702  ],
+     [  1737342000000 , 0.130795  ],
+     [  1737428400000 , 0.134654  ],
+     [  1737514800000 , 0.13316  ],
+     [  1737601200000 , 0.133257  ],
+     [  1737687600000 , 0.131668  ],
+     [  1737946800000 , 0.131935  ],
+     [  1738033200000 , 0.133064  ],
+     [  1738119600000 , 0.132968  ],
+     [  1738206000000 , 0.132585  ],
+     [  1738292400000 , 0.132587  ],
+     [  1738551600000 , 0.133529  ],
+     [  1738638000000 , 0.135439  ],
+     [  1738724400000 , 0.13681  ],
+     [  1738810800000 , 0.137489  ],
+     [  1738897200000 , 0.138244  ],
+     [  1739156400000 , 0.137302  ],
+     [  1739242800000 , 0.137353  ],
+     [  1739329200000 , 0.137336  ],
+     [  1739415600000 , 0.136979  ],
+     [  1739502000000 , 0.137319  ],
+     [  1739761200000 , 0.138089  ],
+     [  1739847600000 , 0.137711  ],
+     [  1739934000000 , 0.137865  ],
+     [  1740020400000 , 0.138694  ],
+     [  1740106800000 , 0.137797  ],
+     [  1740366000000 , 0.13681  ],
+     [  1740452400000 , 0.136322  ],
+     [  1740538800000 , 0.135787  ],
+     [  1740625200000 , 0.135307  ],
+     [  1740711600000 , 0.135298  ],
+     [  1741143600000 , 0.135502  ],
+     [  1741230000000 , 0.134469  ],
+     [  1741316400000 , 0.134307  ],
+     [  1741575600000 , 0.133645  ],
+     [  1741662000000 , 0.13291  ],
+     [  1741748400000 , 0.132372  ],
+     [  1741834800000 , 0.131061  ],
+     [  1741921200000 , 0.131201  ],
+     [  1742180400000 , 0.131139  ],
+     [  1742266800000 , 0.132215  ],
+     [  1742353200000 , 0.131667  ],
+     [  1742439600000 , 0.131154  ],
+     [  1742526000000 , 0.131139  ],
+     [  1742785200000 , 0.131558  ],
+     [  1742871600000 , 0.130738  ],
+     [  1742958000000 , 0.131387  ],
+     [  1743044400000 , 0.130876  ],
+     [  1743130800000 , 0.128695  ],
+     [  1743390000000 , 0.129167  ],
+     [  1743476400000 , 0.118435  ],
+     [  1743562800000 , 0.118338  ],
+     [  1743649200000 , 0.130957  ],
+     [  1743735600000 , 0.130254  ],
+     [  1743994800000 , 0.131466  ],
+     [  1744081200000 , 0.131265  ],
+     [  1744167600000 , 0.129739  ],
+     [  1744254000000 , 0.130193  ],
+     [  1744340400000 , 0.129905  ],
+     [  1744599600000 , 0.131157  ],
+     [  1744686000000 , 0.129814  ],
+     [  1744772400000 , 0.129094  ],
+     [  1744858800000 , 0.12841  ],
+     [  1745290800000 , 0.128944  ],
+     [  1745377200000 , 0.127661  ],
+     [  1745463600000 , 0.127515  ],
+     [  1745550000000 , 0.127428  ],
+     [  1745809200000 , 0.12636  ],
+     [  1745895600000 , 0.125648  ],
+     [  1745982000000 , 0.125396  ],
+     [  1746154800000 , 0.127297  ],
+     [  1746414000000 , 0.125781  ],
+     [  1746500400000 , 0.123696  ],
+     [  1746586800000 , 0.123152  ],
+     [  1746673200000 , 0.12397  ],
+     [  1746759600000 , 0.12519  ],
+     [  1747018800000 , 0.124591  ],
+     [  1747105200000 , 0.123984  ],
+     [  1747191600000 , 0.123301  ],
+     [  1747278000000 , 0.123505  ],
+     [  1747364400000 , 0.123206  ],
+     [  1747623600000 , 0.12303  ],
+     [  1747710000000 , 0.121944  ],
+     [  1747796400000 , 0.122814  ],
+     [  1747882800000 , 0.123206  ],
+     [  1747969200000 , 0.123219  ],
+     [  1748228400000 , 0.12419  ],
+     [  1748314800000 , 0.123696  ],
+     [  1748401200000 , 0.123696  ],
+     [  1748487600000 , 0.123192  ],
+     [  1748574000000 , 0.122809  ],
+     [  1748833200000 , 0.124593  ],
+     [  1748919600000 , 0.124552  ],
+     [  1749006000000 , 0.124828  ],
+     [  1749092400000 , 0.12403  ],
+     [  1749178800000 , 0.124897  ],
+     [  1749438000000 , 0.124828  ],
+     [  1749524400000 , 0.124359  ],
+     [  1749610800000 , 0.124455  ],
+     [  1749697200000 , 0.125022  ],
+     [  1749783600000 , 0.124967  ],
+     [  1750042800000 , 0.124994  ],
+     [  1750129200000 , 0.126257  ],
+     [  1750215600000 , 0.126087  ],
+     [  1750388400000 , 0.126158  ],
+     [  1750647600000 , 0.125861  ],
+     [  1750734000000 , 0.125594  ],
+     [  1750820400000 , 0.125301  ],
+     [  1750906800000 , 0.125777  ],
+     [  1750993200000 , 0.12537  ],
+     [  1751252400000 , 0.124124  ],
+     [  1751338800000 , 0.12702  ],
+     [  1751425200000 , 0.127091  ],
+     [  1751511600000 , 0.127737  ],
+     [  1751598000000 , 0.127521  ],
+     [  1751857200000 , 0.127091  ],
+     [  1751943600000 , 0.126128  ],
+     [  1752030000000 , 0.125987  ],
+     [  1752116400000 , 0.12702  ],
+     [  1752202800000 , 0.125987  ],
+     [  1752462000000 , 0.126381  ],
+     [  1752548400000 , 0.126114  ],
+     [  1752634800000 , 0.126764  ],
+     [  1752721200000 , 0.127824  ],
+     [  1752807600000 , 0.128099  ],
+     [  1753066800000 , 0.128682  ],
+     [  1753153200000 , 0.129196  ],
+     [  1753239600000 , 0.126325  ],
+     [  1753326000000 , 0.127091  ],
+     [  1753412400000 , 0.126608  ],
+     [  1753671600000 , 0.127191  ],
+     [  1753758000000 , 0.128506  ],
+     [  1753844400000 , 0.12924  ],
+     [  1753930800000 , 0.127759  ],
+     [  1754017200000 , 0.129788  ],
+     [  1754276400000 , 0.131312  ],
+     [  1754362800000 , 0.13398  ],
+     [  1754449200000 , 0.135395  ],
+     [  1754535600000 , 0.136366  ],
+     [  1754622000000 , 0.133948  ],
+      
+  ];
+  
+  var maxXAxis = dataSerieDividendYield[dataSerieDividendYield.length-1][0] + 3*24*60*60*1000;
+  var optionsDivY = {
+    series: [
+      { name: "Dividend Yield", data: dataSerieDividendYield },
+    ],
+    colors: ['#77b2d2'], 
+    chart: {
+      type: 'line',
+      height: 400,
+      width: '75%',
+      toolbar : {
+        show: false,
+      },
+      sparkline: { enabled: false },
+      zoom: { enabled: false }
+    },
+    stroke: {
+      width: 2,
+      colors: '#4093bf',
+    },
+    xaxis: {
+      type: 'datetime',
+      show: true,
+      max : maxXAxis,
+      range : 6*365*24*60*60*1000,
+      labels :  {
+        show : true,
+      },
+      tooltip: {
+        enabled: false,
+      },
+      axisBorder: {
+        show: true
+      },
+      axisTicks: {
+        show: true
+      },
+      labels: {
+        datetimeFormatter: {
+          year: 'yyyy',
+          month: 'MMM \'yy',
+          day: 'dd MMM',
+          hour: 'HH:mm'
+        }
+      },
+    },
+    yaxis: {
+      min: 0,
+      forceNiceScale: true,
+      show: true,
+      labels :  {
+        show : true,
+      },
+      tickAmount: 8,
+      axisBorder: {
+        show: true
+      },
+      axisTicks: {
+        show: true
+      },
+      labels : {
+        formatter: function(val, index) {
+          return (val*100).toFixed(2).replace('.',',');
+        }
+      }
+    },
+    fill: {
+      /* opacity: 0.85,  */
+      type: ['solid'],
+    },
+    grid: {
+      padding: {
+       top: 0,
+       bottom: 0,
+       left: 0,
+       right: 0
+      }
+    },
+    legend: {
+      show: true,
+      position: 'bottom',
+      horizontalAlign: 'center',
+      offsetX: 0,
+      offsetY: 0,
+      markers: {
+        fillColors: ['#4093bf'],
+      }
+      
+    },
+    dataLabels: {
+      enabled : false,
+      formatter : function (val, opts) {
+        return (val*100).toFixed(2).replace('.',',')+"%";
+      }
+    },
+    tooltip: {
+      enabled : true,
+      followCursor : false,
+      intersect : false,
+      onDatasetHover: {
+          highlightDataSeries: false,
+      },
+      custom: function({series, seriesIndex, dataPointIndex, w}) {
+          return '<div class="arrow_box" style="font-size:11px"><div>'+formataDataDMY(new Date(w.globals.seriesX[0][dataPointIndex])) +'</div>'+
+            '<div>' + (series[0][dataPointIndex]*100).toFixed(2).replace('.',',') + '% </div>' +
+            '</div>';
+      },
+    },
+  };
+  
+
+  var chartDividendYield = new ApexCharts(document.querySelector("#chartDivY"), optionsDivY);
+  chartDividendYield.render();
+
+
+
+
+
+  
+  function alterarSerieReceitaBruta( ) {
+    var checkBox = document.getElementById("chbRBAnual");
+
+    if (checkBox.checked) {
+      newOption = {
+        series: [
+          { name: "Receita Bruta", data: dataSerieReceitaBruta12m },
+          { name: "Venda de Ativos", data: dataSerieVendaAtivos12m } 
+        ],
+        labels: labelsRB12m,
+      };
+    } else {
+      newOption = {
+        series: [
+          { name: "Receita Bruta", data: dataSerieReceitaBruta },
+          { name: "Venda de Ativos", data: dataSerieVendaAtivos } 
+        ],
+        labels: labelsRB,
+      };
+    }
+    
+    chartReceitaBruta.updateOptions(newOption);
+  }
+  
+
+</script>
+
+
+<style>
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 59px;
+  height: 28px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 1.4s;
+  transition: 1.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 23px;
+    width: 25px;
+    left: 2px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: 1.4s;
+    transition: 1.4s;
+}
+
+input:checked + .slider {
+  background-color: /* #2196F3; */ #ccc;
+}
+/*
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+*/
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(30px);
+  -ms-transform: translateX(30px);
+  transform: translateX(30px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+</style>
+
+
+		<div class="rodape">
+		<div class="center">
+			<ul>
+				<li><strong>Menu institucional:</strong></li>
+				<li><a class="home" href="index.php">Página inicial</a>|</li>
+				<li><a class="consciente" href="consciente.php">Investimento Consciente</a>|</li>
+				<li><a class="contato" href="contato.php">Entre em contato</a>|</li>
+				<li><a class="ultimos-resultados" href="ultimos-resultados.php">Últimos Resultados</a></li>
+			</ul>
+			<ul>
+				<li><strong>Menu software: </strong></li>
+				<li><a class="graficos" href="graficos.php?tipo=1">Gráficos</a>|</li>
+				<li><a class="detalhes" href="detalhes.php">Detalhes</a>|</li>
+				<li><a class="cotacoes" href="cotacoes.php">Histórico de cotações</a>|</li>
+				<li><a class="acionistas" href="acionistas.php">Acionistas</a>|</li>
+				<li><a class="principais-acionistas" href="principais_acionistas.php">Principais Acionistas</a>|</li>
+				<li><a class="administracao" href="administradores.php">Administração</a>|</li>
+				<li><a class="fatos-relevantes" href="fatos_relevantes.php">Fatos Relevantes</a>|</li>
+				<li><a class="apresentacoes" href="apresentacoes.php">Apresentações</a>|</li>
+				<li><a class="proventos" href="proventos.php">Proventos</a>|</li>
+				<li><a class="historicos" href="balancos.php">Balanços Históricos</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-MBRGJ9JF74"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-MBRGJ9JF74');
+	</script>	
+	
+	<script  type="text/javascript" src="script/pvt.php" language="JavaScript" async></script>
+  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96c2f2683f5a8147',t:'MTc1NDY5NzM1MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

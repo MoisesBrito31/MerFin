@@ -1,8 +1,14 @@
 from django.db.models import Q
 from rest_framework import generics
 from rest_framework import filters
-from .models import Ativo, Setor, Segmento, HistoricoAtivo
-from .serializer import AtivoListSerializer, SetorSerializer, SegmentoSerializer, AtivoSerializer, HistoricoAtivoSerializer
+from .models import (
+    Ativo, Setor, Segmento, HistoricoAtivo,
+    FundoImobiliario, FIIHistoricoPreco, FIIRendimento, FIIDividendYield,
+)
+from .serializer import (
+    AtivoListSerializer, SetorSerializer, SegmentoSerializer, AtivoSerializer, HistoricoAtivoSerializer,
+    FIIListSerializer, FIISerializer, FIIHistoricoPrecoSerializer, FIIRendimentoSerializer, FIIDividendYieldSerializer,
+)
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
@@ -59,4 +65,66 @@ class HistoricoAtivoListAPIView(generics.ListAPIView):
         if data_inicio:
             queryset = queryset.filter(data__gte=data_inicio)
         return queryset
+
+
+# --- FII Views ---
+
+class FIIListAPIView(generics.ListAPIView):
+    serializer_class = FIIListSerializer
+    filter_backends = [filters.OrderingFilter]
+    ordering_fields = ['codigo', 'nome', 'cotacao_atual', 'p_vp']
+    ordering = ['codigo']
+
+    def get_queryset(self):
+        queryset = FundoImobiliario.objects.all()
+        search = self.request.query_params.get('search')
+        segmento = self.request.query_params.get('segmento')
+        q = Q()
+        if search:
+            q &= (Q(codigo__icontains=search) | Q(nome__icontains=search) | Q(segmento__nome__icontains=search))
+        if segmento:
+            q &= Q(segmento__nome__iexact=segmento)
+        return queryset.filter(q)
+
+
+class FIIReadonlyAPIView(generics.RetrieveAPIView):
+    queryset = FundoImobiliario.objects.all()
+    serializer_class = FIISerializer
+    lookup_field = 'codigo'
+
+
+class FIIHistoricoPrecoListAPIView(generics.ListAPIView):
+    serializer_class = FIIHistoricoPrecoSerializer
+
+    def get_queryset(self):
+        codigo = self.kwargs.get('codigo')
+        qs = FIIHistoricoPreco.objects.filter(fii__codigo=codigo).order_by('data')
+        data_inicio = self.request.query_params.get('data_inicio')
+        if data_inicio:
+            qs = qs.filter(data__gte=data_inicio)
+        return qs
+
+
+class FIIRendimentoListAPIView(generics.ListAPIView):
+    serializer_class = FIIRendimentoSerializer
+
+    def get_queryset(self):
+        codigo = self.kwargs.get('codigo')
+        qs = FIIRendimento.objects.filter(fii__codigo=codigo).order_by('data')
+        data_inicio = self.request.query_params.get('data_inicio')
+        if data_inicio:
+            qs = qs.filter(data__gte=data_inicio)
+        return qs
+
+
+class FIIDividendYieldListAPIView(generics.ListAPIView):
+    serializer_class = FIIDividendYieldSerializer
+
+    def get_queryset(self):
+        codigo = self.kwargs.get('codigo')
+        qs = FIIDividendYield.objects.filter(fii__codigo=codigo).order_by('data')
+        data_inicio = self.request.query_params.get('data_inicio')
+        if data_inicio:
+            qs = qs.filter(data__gte=data_inicio)
+        return qs
 
